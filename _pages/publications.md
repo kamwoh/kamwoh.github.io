@@ -18,7 +18,7 @@ Lixin Fan*, Kam Woh Ng*, Ce Ju*, Tianyu Zhang, Chang Liu, Chee Seng Chan, Qiang 
 
 **Deep Polarized Network for Supervised Learning of Accurate Binary Hashing Codes**
 
-Lixin Fan*, Kam Woh Ng*, Ce Ju, Tianyu Zhang and Chee Seng Chan.
+Lixin Fan*, Kam Woh Ng*, Ce Ju, Tianyu Zhang and Chee Seng Chan. To appear in the 29th International Joint Conference on Artificial Intelligence, 2020.
 
 2019
 ------
