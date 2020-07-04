@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "About me"
-excerpt: "About me"
+title: "Homepage of Kam Woh"
+excerpt: "Research Scientist at WeBank"
 author_profile: true
 redirect_from: 
   - /about/
@@ -10,7 +10,7 @@ redirect_from:
 
 Welcome
 ======
-I am currently working in WeBank, Shenzhen, as a research scientist, supervised by [Dr. Lixin Fan](https://www.linkedin.com/in/lixin-fan-9278406/). My research interests are deep learning, computer vision, and privacy & security in AI.
+I am currently working at WeBank, Shenzhen, as a research scientist, supervised by [Dr. Lixin Fan](https://www.linkedin.com/in/lixin-fan-9278406/). My research interests are deep learning, computer vision, and privacy & security in AI.
 
 Before joining WeBank, I was a lab member of CISIP in [University of Malaya (UM)](https://um.edu.my/) under by of [Prof. Chan Chee Seng](http://cs-chan.com/). I obtained my B.S in Computer Science at UM, and I was fortunate to have Prof. Chan and Dr. Fan as my supervisors of my [final year project](https://arxiv.org/abs/1901.08551), which is about applying fuzzy logic in a Deep Convolutional Network.
 
