@@ -5,8 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-Publications
-======
 You can also find my articles in [my Google Scholar](https://scholar.google.com/citations?user=HxEQkLoAAAAJ&hl=en).
 (* indicates equal contribution. )
 
