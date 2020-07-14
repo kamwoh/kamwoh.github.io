@@ -14,7 +14,7 @@ You can also find my articles in [my Google Scholar](https://scholar.google.com/
 <br>Lixin Fan\*, Kam Woh Ng\*, Ce Ju\*, Tianyu Zhang, Chang Liu, Chee Seng Chan, Qiang Yang.
 
 **Deep Polarized Network for Supervised Learning of Accurate Binary Hashing Codes** \[[PDF](https://www.ijcai.org/Proceedings/2020/0115.pdf)\]
-<br>Lixin Fan\*, Kam Woh Ng\*, Ce Ju, Tianyu Zhang and Chee Seng Chan. To appear in the 29th International Joint Conference on Artificial Intelligence (IJCAI), 2020.
+<br>Lixin Fan\*, Kam Woh Ng\*, Ce Ju, Tianyu Zhang and Chee Seng Chan. In the 29th International Joint Conference on Artificial Intelligence (IJCAI), 2020.
 
 2019
 ------
