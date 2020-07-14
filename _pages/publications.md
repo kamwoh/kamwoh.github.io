@@ -13,7 +13,7 @@ You can also find my articles in [my Google Scholar](https://scholar.google.com/
 **Rethinking Privacy Preserving Deep Learning: How to Evaluate and Thwart Privacy Attacks** \[[arXiv](https://arxiv.org/abs/2006.11601)\]
 <br>Lixin Fan\*, Kam Woh Ng\*, Ce Ju\*, Tianyu Zhang, Chang Liu, Chee Seng Chan, Qiang Yang.
 
-**Deep Polarized Network for Supervised Learning of Accurate Binary Hashing Codes**
+**Deep Polarized Network for Supervised Learning of Accurate Binary Hashing Codes** \[[PDF](https://www.ijcai.org/Proceedings/2020/0115.pdf)\]
 <br>Lixin Fan\*, Kam Woh Ng\*, Ce Ju, Tianyu Zhang and Chee Seng Chan. To appear in the 29th International Joint Conference on Artificial Intelligence (IJCAI), 2020.
 
 2019

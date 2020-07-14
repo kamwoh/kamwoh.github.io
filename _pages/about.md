@@ -20,7 +20,7 @@ Recent Updates
 ======
 [June 2020] Our work **Rethinking Privacy Preserving Deep Learning: How to Evaluate and Thwart Privacy Attacks** is online. \[[arXiv](https://arxiv.org/abs/2006.11601)\]
 
-[April 2020] Our paper **Deep Polarized Network for Supervised Learning of Accurate Binary Hashing Codes** is accepted at **IJCAI-2020**.
+[April 2020] Our paper **Deep Polarized Network for Supervised Learning of Accurate Binary Hashing Codes** is accepted at **IJCAI-2020**. \[[PDF](https://www.ijcai.org/Proceedings/2020/0115.pdf)\]
 
 [April 2020] Assisted in development *as an alumni of UM* for CosMos, a system to monitor Covid-19 patients. \[[News](https://www.thestar.com.my/news/nation/2020/04/24/cosmos-um-develops-app-to-monitor-suspected-covid-19-patients)\]
 
