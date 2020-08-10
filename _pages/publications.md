@@ -11,15 +11,19 @@ You can also find my articles in [my Google Scholar](https://scholar.google.com/
 2020
 ------
 **Rethinking Privacy Preserving Deep Learning: How to Evaluate and Thwart Privacy Attacks** \[[arXiv](https://arxiv.org/abs/2006.11601)\]
+<br>We proposed Secret Polarization Network to perturb exchanged gradient in order to defend against Deep Leakage attack.
 <br>Lixin Fan\*, Kam Woh Ng\*, Ce Ju\*, Tianyu Zhang, Chang Liu, Chee Seng Chan, Qiang Yang.
 
 **Deep Polarized Network for Supervised Learning of Accurate Binary Hashing Codes** \[[PDF](https://www.ijcai.org/Proceedings/2020/0115.pdf)\]
+<br>We proposed polarization loss, a differentiable hinge-like loss, for learning accurate hash codes.
 <br>Lixin Fan\*, Kam Woh Ng\*, Ce Ju, Tianyu Zhang and Chee Seng Chan. In the 29th International Joint Conference on Artificial Intelligence (IJCAI), 2020.
 
 2019
 ------
 **Rethinking deep neural network ownership verification: Embedding passports to defeat ambiguity attacks** \[[arXiv](https://arxiv.org/abs/1909.07830)\] \[[Code](https://github.com/kamwoh/DeepIPR)\] \[[Website](https://kamwoh.github.io/DeepIPR/)\]
+<br>We proposed embedding "passport" into deep neural network for ownership verification.
 <br>Lixin Fan\*, Kam Woh Ng\*, Chee Seng Chan. In 33th Conference on Neural Information Processing Systems (NeurIPS), 2019.
 
 **A Universal Logic Operator for Interpretable Deep Convolution Networks** \[[arXiv](https://arxiv.org/abs/1901.08551)\]
+<br>We proposed to apply fuzzy logic in Deep Convolutional Network for interpretability.
 <br>Kam Woh Ng\*, Lixin Fan\*, Chee Seng Chan. In AAAI-19 Workshop on Network Interpretability for Deep Learning.
