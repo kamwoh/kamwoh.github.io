@@ -10,7 +10,7 @@ You can also find my articles in [my Google Scholar](https://scholar.google.com/
 
 2020
 ------
-**Rethinking Privacy Preserving Deep Learning: How to Evaluate and Thwart Privacy Attacks** \[[arXiv](https://arxiv.org/abs/2006.11601)\]
+**Rethinking Privacy Preserving Deep Learning: How to Evaluate and Thwart Privacy Attacks** \[[arXiv](https://arxiv.org/abs/2006.11601)\] \[[Book](https://www.springer.com/gp/book/9783030630751)\]
 <br>We proposed Secret Polarization Network to perturb exchanged gradient in order to defend against Deep Leakage attack.
 <br>Lixin Fan\*, Kam Woh Ng\*, Ce Ju\*, Tianyu Zhang, Chang Liu, Chee Seng Chan, Qiang Yang.
 
