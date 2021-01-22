@@ -10,7 +10,7 @@ redirect_from:
 
 Welcome to my personal page
 ======
-I am currently working at WeBank, Shenzhen, as an AI Researcher, supervised by [Dr. Lixin Fan](https://www.linkedin.com/in/lixin-fan-9278406/). My research interests are deep learning, computer vision and representation learning.
+I am currently working as an AI Researcher at WeBank, Shenzhen. My research interests are deep learning, computer vision and representation learning.
 
 Prior to joining WeBank, I was a lab member of CISIP in [University of Malaya (UM)](https://um.edu.my/) under [Prof. Chan Chee Seng](http://cs-chan.com/).
 
