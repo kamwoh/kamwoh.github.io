@@ -8,6 +8,12 @@ author_profile: true
 You can also find my articles in [my Google Scholar](https://scholar.google.com/citations?user=HxEQkLoAAAAJ&hl=en).
 (* indicates equal contribution. )
 
+2021
+------
+**Protecting Intellectual Property of Generative Adversarial Networks from Ambiguity Attack** \[[arXiv](https://arxiv.org/abs/2102.04362)\]
+<br>We proposed an intellectual property right protection framework for Generative Adversarial Networks.
+<br>Ding Sheng Ong, Chee Seng Chan, Kam Woh Ng, Lixin Fan, Qiang Yang. In CVPR, 2021.
+
 2020
 ------
 **Rethinking Privacy Preserving Deep Learning: How to Evaluate and Thwart Privacy Attacks** \[[arXiv](https://arxiv.org/abs/2006.11601)\] \[[Book](https://www.springer.com/gp/book/9783030630751)\]

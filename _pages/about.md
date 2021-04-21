@@ -1,22 +1,24 @@
 ---
 permalink: /
-title: "Homepage of Kam Woh"
-excerpt: "Research Scientist at WeBank"
+title: "Welcome to my personal page"
+excerpt: "PhD student at University of Surrey (start from September 2021)"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Welcome to my personal page
 ======
-I am currently working as an AI Researcher at WeBank, Shenzhen. My research interests are deep learning, computer vision and representation learning.
+
+I will go to University of Surrey in September 2021 for Vision, Speech and Signal Processing PhD under Prof. Tao Xiang and Dr. Yi-zhe Song. 
+
+I worked as an AI Researcher at WeBank, Shenzhen under Dr. Lixin Fan.
 
 Prior to joining WeBank, I was a lab member of CISIP in [University of Malaya (UM)](https://um.edu.my/) under [Prof. Chan Chee Seng](http://cs-chan.com/).
 
 You can contact me via *kamwoh \[at\] gmail.com*.
 
-Recent Updates
+<!-- Recent Updates
 ======
 
 [November 2020] Our book **Federated Learning: Privacy and Incentive** is available in Springer. \[[Book](https://www.springer.com/gp/book/9783030630751)\]
@@ -33,4 +35,4 @@ Recent Updates
 
 [November 2018] Our workshop paper **A Universal Logic Operator for Interpretable Deep Convolution Networks** is accepted at **AAAI-19 Workshop on Network Interpretability for Deep Learning**. \[[arXiv](https://arxiv.org/abs/1901.08551)\]
 
-[January 2018] Joined CISIP, UM.
+[January 2018] Joined CISIP, UM. -->

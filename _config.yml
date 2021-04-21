@@ -9,8 +9,8 @@
 locale                   : "en-US"
 title                    : "Ng Kam Woh"
 title_separator          : "-"
-name                     : &name "Kam Woh"
-description              : &description "Research Scientist at WeBank, Shenzhen"
+name                     : &name "Kam Woh Ng"
+description              : &description "PhD student at University of Surrey (start from September 2021)"
 url                      : https://kamwoh.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "kamwoh.github.io"
@@ -80,11 +80,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Kam Woh"
+  name             : "Kam Woh Ng"
   avatar           : "profile.png"
   bio              : "My research interests are deep learning, computer vision and representation learning."
-  location         : "Shenzhen, China"
-  employer         : "WeBank"
+  location         : "Malaysia"
+  employer         : 
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=HxEQkLoAAAAJ&hl=en"
   email            : "kamwoh@gmail.com"
