@@ -8,8 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-======
-
 I will go to University of Surrey in September 2021 for Vision, Speech and Signal Processing PhD under Prof. Tao Xiang and Dr. Yi-zhe Song. 
 
 I worked as an AI Researcher at WeBank, Shenzhen under Dr. Lixin Fan.
