@@ -11,7 +11,7 @@ You can also find my articles in [my Google Scholar](https://scholar.google.com/
 2021
 ------
 **DeepIP: Deep Neural Network Intellectual Property Protection with Passports** \[[TPAMI](https://ieeexplore.ieee.org/document/9454280)\] \[[Code](https://github.com/kamwoh/DeepIPR)\]
-<br>We proposed an intellectual property right protection framework for Generative Adversarial Networks.
+<br>We further extend the work of ownership verification with "passport" by completely describing how we perform ambiguity attack on a protected model.
 <br>Lixin Fan\*, Kam Woh Ng\*, Chee Seng Chan, Qiang Yang. In TPAMI, 2021.
 
 **Protecting Intellectual Property of Generative Adversarial Networks from Ambiguity Attack** \[[CVPR](https://arxiv.org/abs/2102.04362)\] \[[Code](https://github.com/dingsheng-ong/ipr-gan)\]
