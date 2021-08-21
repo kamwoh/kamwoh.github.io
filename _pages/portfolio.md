@@ -18,3 +18,7 @@ author_profile: true
 **Federated Learning: Privacy and Incentive (An Edited Book)** - Program Committee and Event Assistant \[[Link](http://www.federated-learning.org/FLPI/)\] \[[Book](https://www.springer.com/gp/book/9783030630751)\]
 
 **IEEE BigData'20 Special Track: Explainable AI for Big Data** - Program Committee and Event Assistant \[[Link](https://www.cse.wustl.edu/~ychen/IEEE-XAI-2020/)\]
+
+2019
+------
+**Neurips 2019 机器之心 (Ji Qi Zhi Xin) Online Sharing** - Invited Talk \[[Link](https://picture.iczhiku.com/weixin/message1574920220996.html)\]
