@@ -5,7 +5,9 @@ permalink: /portfolio/
 author_profile: true
 ---
 
-I assisted in organizing some workshops in top conference.
+2021
+------
+**Toward Intellectual Property Protection on Deep Learning as a Services (DeepIPR-IJCAI)** - Invited Talk \[[Link](http://federated-learning.org/DeepIPR-IJCAI-2021/)\]
 
 2020
 ------
