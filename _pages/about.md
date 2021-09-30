@@ -1,21 +1,18 @@
 ---
 permalink: /
 title: "Welcome to my personal page"
-excerpt: "PhD student at University of Surrey (start from September 2021)"
+excerpt: "PhD student at University of Surrey"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I will go to University of Surrey in September 2021 for Vision, Speech and Signal Processing PhD under Prof. Tao Xiang and Dr. Yi-zhe Song. 
+I am a first year Ph.D student at University of Surrey under the supervision of Prof. Tao Xiang and Prof. Yi-Zhe Song.
 
-I worked as an AI Researcher at WeBank, Shenzhen under Dr. Lixin Fan.
+Prior to joining University of Surrey, I was an AI Researcher at WeBank under the lead of Dr. Lixin Fan and I was a lab member of CISIP in [University of Malaya (UM)](https://um.edu.my/) under [Prof. Chan Chee Seng](http://cs-chan.com/).
 
-Prior to joining WeBank, I was a lab member of CISIP in [University of Malaya (UM)](https://um.edu.my/) under [Prof. Chan Chee Seng](http://cs-chan.com/).
-
-You can contact me via *kamwoh \[at\] gmail.com*.
-
+You can contact me via *kamwoh \[at\] gmail.com*. 
 
 <!-- Recent Updates
 ======

@@ -10,6 +10,10 @@ You can also find my articles in [my Google Scholar](https://scholar.google.com/
 
 2021
 ------
+**One Loss for All: Deep Hashing with a Single Cosine Similarity based Learning Objective** \[[NeurIPS](https://arxiv.org/abs/2109.14449)\] \[[Code](https://github.com/kamwoh/orthohash)\]
+<br>We proposed a simple and elegant deep hashing method with only a single classification learing objective.
+<br>Jiun Tian Hoe\*, Kam Woh Ng\*, Tianyu Zhang, Chee Seng Chan, Yi-Zhe Song, Tao Xiang. In NeurIPS, 2021.
+
 **DeepIP: Deep Neural Network Intellectual Property Protection with Passports** \[[TPAMI](https://ieeexplore.ieee.org/document/9454280)\] \[[Code](https://github.com/kamwoh/DeepIPR)\]
 <br>We further extend the work of ownership verification with "passport" by completely describing how we perform ambiguity attack on a protected model.
 <br>Lixin Fan\*, Kam Woh Ng\*, Chee Seng Chan, Qiang Yang. In TPAMI, 2021.
