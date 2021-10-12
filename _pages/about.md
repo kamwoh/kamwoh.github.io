@@ -14,6 +14,16 @@ Prior to joining University of Surrey, I was an AI Researcher at WeBank under th
 
 You can contact me via *kamwoh \[at\] gmail.com*. 
 
+My Projects
+======
+
+Deep Hashing for Image Retrieval
+------
+
+1. [Deep Polarized Network (DPN)](https://github.com/kamwoh/DPN) - Bit-wise hinge loss with random orthogonal codebook.
+2. [OrthoHash](https://github.com/kamwoh/orthohash) - Cross entropy loss with random orthogonal codebook.
+
+
 <!-- Recent Updates
 ======
 
