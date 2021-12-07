@@ -22,7 +22,7 @@ Deep Hashing for Image Retrieval
 
 1. [Deep Polarized Network (DPN)](https://github.com/kamwoh/DPN) - Bit-wise hinge loss with random orthogonal codebook.
 2. [OrthoHash](https://github.com/kamwoh/orthohash) - Cross entropy loss with random orthogonal codebook.
-
+3. [FIRe](https://github.com/CISiPLab/cisip-FIRe) - Open source Fast Image Retrieval framework.
 
 <!-- Recent Updates
 ======
