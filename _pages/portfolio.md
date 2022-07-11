@@ -5,6 +5,11 @@ permalink: /portfolio/
 author_profile: true
 ---
 
+2022
+------
+**Our won the second place of \[[eBay eProduct Visual Search Challenge - FGVC9 (CVPR 2022)](https://eval.ai/web/challenges/challenge-page/1541/overview)\] \[[Certificate](/files/2nd-place-certificate-eproduct-fgvc9.pdf)\]
+
+
 2021
 ------
 **Toward Intellectual Property Protection on Deep Learning as a Services (DeepIPR-IJCAI)** - Invited Talk \[[Link](http://federated-learning.org/DeepIPR-IJCAI-2021/)\]

@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a first year Ph.D student at University of Surrey under the supervision of Prof. Tao Xiang and Prof. Yi-Zhe Song.
+I am a first year Ph.D student at University of Surrey under the supervision of Prof. [Tao Xiang](http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html) and Prof. [Yi-Zhe Song](https://www.surrey.ac.uk/people/yi-zhe-song).
 
-Prior to joining University of Surrey, I was an AI Researcher at WeBank under the lead of Dr. Lixin Fan and I was a lab member of CISIP in [University of Malaya (UM)](https://um.edu.my/) under [Prof. Chan Chee Seng](http://cs-chan.com/).
+Prior to joining University of Surrey, I was an AI Researcher at WeBank under the lead of Dr. [Lixin Fan](https://scholar.google.fi/citations?user=fOsgdn0AAAAJ&hl=en) and I was a lab member of CISIP in [University of Malaya (UM)](https://um.edu.my/) under Prof.  [Chan Chee Seng](http://cs-chan.com/).
 
 You can contact me via *kamwoh \[at\] gmail.com*. 
 
