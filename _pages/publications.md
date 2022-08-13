@@ -10,10 +10,13 @@ You can also find my articles in [my Google Scholar](https://scholar.google.com/
 
 2022
 ------
-**CyEDA: Cycle-Object Edge Consistency Domain Adaptation** \[ICIP\]
+**CyEDA: Cycle-Object Edge Consistency Domain Adaptation** \[ICIP\] \[[Code](https://github.com/bjc1999/CyEDA)\]
 <br>We proposed blending masks and cycle-object edge consistency to preserve instance-level details in an image during day-night translation.
 <br>Jing Chong Beh, **Kam Woh Ng**, Jie Long Kew, Che-Tsung Lin, Chee Seng Chan, Shang-Hong Lai, Christopher Zach. In ICIP, 2022.
 
+**Large-Scale Product Retrieval with Weakly Supervised Representation Learning** \[[arXiv](https://arxiv.org/abs/2208.00955)\] \[[Code](https://github.com/01BB01/eBayChallenge)\]
+<br>We mine pseudo-attributes from product titles for weakly supervised representation learning.
+<br>Xiao Han\*, **Kam Woh Ng**\*, Sauradip Nag, Zhiyu Qu. In FGVC9 CVPR, 2022.
 
 2021
 ------
