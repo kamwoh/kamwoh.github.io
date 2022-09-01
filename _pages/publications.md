@@ -10,7 +10,7 @@ You can also find my articles in [my Google Scholar](https://scholar.google.com/
 
 2022
 ------
-**CyEDA: Cycle-Object Edge Consistency Domain Adaptation** \[ICIP\] \[[Code](https://github.com/bjc1999/CyEDA)\]
+**CyEDA: Cycle-Object Edge Consistency Domain Adaptation** \[ICIP\] \[[PDF](http://cs-chan.com/doc/ICIP2022a.pdf)\] \[[Code](https://github.com/bjc1999/CyEDA)\]
 <br>We proposed blending masks and cycle-object edge consistency to preserve instance-level details in an image during day-night translation.
 <br>Jing Chong Beh, **Kam Woh Ng**, Jie Long Kew, Che-Tsung Lin, Chee Seng Chan, Shang-Hong Lai, Christopher Zach. In ICIP, 2022.
 
