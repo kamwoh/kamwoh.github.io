@@ -14,19 +14,30 @@ Prior to joining University of Surrey, I was an AI Researcher at WeBank under th
 
 You can contact me via *kamwoh \[at\] gmail.com*. 
 
+My CV can be downloaded [here](https://kamwoh.github.io/files/cv.pdf)
+
 My Projects
 ======
+
+Image Generation with Diffusion
+------
+1. [DreamCreature](https://github.com/kamwoh/dreamcreature) - Generate images of novel creatures by mixing parts with stable diffusion.
+
+Deep Watermarking
+1. [DeepIPR (NeurIPS 2019)](https://github.com/kamwoh/DeepIPR) - Watermarking our DNNs by embedding "passport" and "signature".
+2. [IPR-GAN (CVPR 2022)](https://github.com/dingsheng-ong/ipr-gan) - Protecting our GANs by generating watermarked images.
 
 Deep Hashing for Image Retrieval
 ------
 
-1. [Deep Polarized Network (DPN)](https://github.com/kamwoh/DPN) - Bit-wise hinge loss with random orthogonal codebook.
-2. [OrthoHash](https://github.com/kamwoh/orthohash) - Cross entropy loss with random orthogonal codebook.
+1. [DPN (IJCAI 2020)](https://github.com/kamwoh/DPN) - Bit-wise hinge loss with random orthogonal codebook.
+2. [OrthoHash (NeurIPS 2021)](https://github.com/kamwoh/orthohash) - Cross entropy loss with random orthogonal codebook.
 3. [FIRe](https://github.com/CISiPLab/cisip-FIRe) - Open source Fast Image Retrieval framework.
-4. [SDC](https://github.com/kamwoh/sdc) - Unsupervised hashing by maximizing the utilization of hash spaces through Wasserstein distance.
+4. [SDC (BMVC 2023 Oral)](https://github.com/kamwoh/sdc) - Unsupervised hashing by maximizing the utilization of hash spaces through Wasserstein distance.
 
 Review Experiences
 ======
+- CVPR 2024
 - ICLR 2024
 - NeurIPS 2023
 - CVPR 2023
