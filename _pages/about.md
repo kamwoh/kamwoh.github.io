@@ -12,23 +12,21 @@ I am a third year Ph.D student at University of Surrey under the supervision of 
 
 Prior to joining University of Surrey, I was an AI Researcher at WeBank under the lead of Dr. [Lixin Fan](https://scholar.google.fi/citations?user=fOsgdn0AAAAJ&hl=en) and I was a lab member of CISIP in [University of Malaya (UM)](https://um.edu.my/) under Prof.  [Chan Chee Seng](http://cs-chan.com/).
 
-You can contact me via *kamwoh \[at\] gmail.com*. 
-
-My CV can be downloaded [here](https://kamwoh.github.io/files/cv.pdf)
+You can contact me via *kamwoh \[at\] gmail.com*. Please see my CV at [here](https://kamwoh.github.io/files/cv.pdf).
 
 My Projects
 ======
 
-Image Generation with Diffusion
-------
+### Image Generation with Diffusion
+
 1. [DreamCreature](https://github.com/kamwoh/dreamcreature) - Generate images of novel creatures by mixing parts with stable diffusion.
 
-Deep Watermarking
+### Deep Watermarking
+
 1. [DeepIPR (NeurIPS 2019)](https://github.com/kamwoh/DeepIPR) - Watermarking our DNNs by embedding "passport" and "signature".
 2. [IPR-GAN (CVPR 2022)](https://github.com/dingsheng-ong/ipr-gan) - Protecting our GANs by generating watermarked images.
 
-Deep Hashing for Image Retrieval
-------
+### Deep Hashing for Image Retrieval
 
 1. [DPN (IJCAI 2020)](https://github.com/kamwoh/DPN) - Bit-wise hinge loss with random orthogonal codebook.
 2. [OrthoHash (NeurIPS 2021)](https://github.com/kamwoh/orthohash) - Cross entropy loss with random orthogonal codebook.
