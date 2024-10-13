@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a third year Ph.D student at University of Surrey under the supervision of Prof. [Tao Xiang](http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html) and Prof. [Yi-Zhe Song](https://www.surrey.ac.uk/people/yi-zhe-song). I also work closely with Dr. [Xiatian (Eddy) Zhu](https://xiatian-zhu.github.io/).
+I am a forth year Ph.D student at University of Surrey under the supervision of Prof. [Tao Xiang](http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html) and Prof. [Yi-Zhe Song](https://www.surrey.ac.uk/people/yi-zhe-song). I also work closely with Dr. [Xiatian (Eddy) Zhu](https://xiatian-zhu.github.io/).
 
 Prior to joining University of Surrey, I was an AI Researcher at WeBank under the lead of Dr. [Lixin Fan](https://scholar.google.fi/citations?user=fOsgdn0AAAAJ&hl=en) and I was a lab member of CISIP in [University of Malaya (UM)](https://um.edu.my/) under Prof.  [Chan Chee Seng](http://cs-chan.com/).
 
@@ -19,12 +19,10 @@ My Projects
 
 ### Image Generation with Diffusion
 
-1. [DreamCreature](https://github.com/kamwoh/dreamcreature) - Generate images of novel creatures by mixing parts with stable diffusion.
+1. [PartCraft (ECCV 2024)](https://github.com/kamwoh/partcraft) - Crafting object by parts with text-to-image diffusion models.
 
-### Deep Watermarking
-
-1. [DeepIPR (NeurIPS 2019)](https://github.com/kamwoh/DeepIPR) - Watermarking our DNNs by embedding "passport" and "signature".
-2. [IPR-GAN (CVPR 2022)](https://github.com/dingsheng-ong/ipr-gan) - Protecting our GANs by generating watermarked images.
+### Interpretable Fine-grained Hashing
+1. [ConceptHash (CVPRW 2024 FGVC11 Best paper award)](https://github.com/kamwoh/concepthash) - Learning to encode parts into interpretable codes.
 
 ### Deep Hashing for Image Retrieval
 
@@ -33,8 +31,19 @@ My Projects
 3. [FIRe](https://github.com/CISiPLab/cisip-FIRe) - Open source Fast Image Retrieval framework.
 4. [SDC (BMVC 2023 Oral)](https://github.com/kamwoh/sdc) - Unsupervised hashing by maximizing the utilization of hash spaces through Wasserstein distance.
 
+### Deep Watermarking
+
+1. [DeepIPR (NeurIPS 2019)](https://github.com/kamwoh/DeepIPR) - Watermarking our DNNs by embedding "passport" and "signature".
+2. [IPR-GAN (CVPR 2022)](https://github.com/dingsheng-ong/ipr-gan) - Protecting our GANs by generating watermarked images.
+
 Review Experiences
 ======
+- ICLR 2025
+- AISTATS 2025
+- AAAI 2025
+- NeurIPS 2024
+- ECCV 2024
+- IJCV  
 - CVPR 2024
 - ICLR 2024
 - NeurIPS 2023
