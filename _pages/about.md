@@ -22,6 +22,7 @@ My Projects
 1. [PartCraft (ECCV 2024)](https://github.com/kamwoh/partcraft) - Crafting object by parts with text-to-image diffusion models.
 
 ### Interpretable Fine-grained Hashing
+
 1. [ConceptHash (CVPRW 2024 FGVC11 Best paper award)](https://github.com/kamwoh/concepthash) - Learning to encode parts into interpretable codes.
 
 ### Deep Hashing for Image Retrieval
@@ -38,6 +39,7 @@ My Projects
 
 Review Experiences
 ======
+- ICML 2025
 - ICLR 2025
 - AISTATS 2025
 - AAAI 2025
@@ -58,6 +60,14 @@ Review Experiences
 <!-- Recent Updates
 ======
 
+[October 2024] Presented my poster at ECCV!!
+
+[August 2024] Started my internship at Meta!!
+
+[July 2024] One paper accepted at ECCV 2024!!
+
+[June 2024] Received best workshop paper award at FGVC11, CVPR!! 
+
 [November 2020] Our book **Federated Learning: Privacy and Incentive** is available in Springer. \[[Book](https://www.springer.com/gp/book/9783030630751)\]
 
 [June 2020] Our work **Rethinking Privacy Preserving Deep Learning: How to Evaluate and Thwart Privacy Attacks** is online. \[[arXiv](https://arxiv.org/abs/2006.11601)\] \[[Book](https://www.springer.com/gp/book/9783030630751)\]
@@ -73,3 +83,7 @@ Review Experiences
 [November 2018] Our workshop paper **A Universal Logic Operator for Interpretable Deep Convolution Networks** is accepted at **AAAI-19 Workshop on Network Interpretability for Deep Learning**. \[[arXiv](https://arxiv.org/abs/1901.08551)\]
 
 [January 2018] Joined CISIP, UM. -->
+
+<div>
+  <a href="https://info.flagcounter.com/erUK"><img src="https://s05.flagcounter.com/count2/erUK/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+</div>
