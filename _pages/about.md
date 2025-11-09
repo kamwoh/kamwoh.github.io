@@ -3,12 +3,14 @@ permalink: /
 title: "Welcome to my personal page"
 excerpt: "PhD student at University of Surrey"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-I am a forth year Ph.D student at University of Surrey under the supervision of Prof. [Tao Xiang](http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html) and Prof. [Yi-Zhe Song](https://www.surrey.ac.uk/people/yi-zhe-song). I also work closely with Dr. [Xiatian (Eddy) Zhu](https://xiatian-zhu.github.io/).
+I am an AI Research Scientist at [Meta AI](https://ai.meta.com/), where I work on video diffusion models and generative rendering.
+
+I received my Ph.D. in Computer Science from University of Surrey under the supervision of Prof. [Tao Xiang](http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html) and Prof. [Yi-Zhe Song](https://www.surrey.ac.uk/people/yi-zhe-song). I also work closely with Dr. [Xiatian (Eddy) Zhu](https://xiatian-zhu.github.io/).
 
 Prior to joining University of Surrey, I was an AI Researcher at WeBank under the lead of Dr. [Lixin Fan](https://scholar.google.fi/citations?user=fOsgdn0AAAAJ&hl=en) and I was a lab member of CISIP in [University of Malaya (UM)](https://um.edu.my/) under Prof.  [Chan Chee Seng](http://cs-chan.com/).
 
@@ -17,9 +19,14 @@ You can contact me via *kamwoh \[at\] gmail.com*. Please see my CV at [here](htt
 My Projects
 ======
 
-### Image Generation with Diffusion
+### Generative Rendering
+
+1. [Kaleido](https://shikun.io/projects/kaleido) - A family of spatial generative models that achieves photorealistic, unified object- and scene-level neural rendering.
+
+### Diffusion Models
 
 1. [PartCraft (ECCV 2024)](https://github.com/kamwoh/partcraft) - Crafting object by parts with text-to-image diffusion models.
+2. [Chirpy3D](https://github.com/kamwoh/chirpy3d) - Learning 3D object generation from 2D unposed images.
 
 ### Interpretable Fine-grained Hashing
 
@@ -39,13 +46,14 @@ My Projects
 
 Review Experiences
 ======
+- NeurIPS 2025
 - ICML 2025
 - ICLR 2025
 - AISTATS 2025
 - AAAI 2025
 - NeurIPS 2024
 - ECCV 2024
-- IJCV  
+- IJCV
 - CVPR 2024
 - ICLR 2024
 - NeurIPS 2023
@@ -66,7 +74,7 @@ Review Experiences
 
 [July 2024] One paper accepted at ECCV 2024!!
 
-[June 2024] Received best workshop paper award at FGVC11, CVPR!! 
+[June 2024] Received best workshop paper award at FGVC11, CVPR!!
 
 [November 2020] Our book **Federated Learning: Privacy and Incentive** is available in Springer. \[[Book](https://www.springer.com/gp/book/9783030630751)\]
 
