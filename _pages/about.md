@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an AI Research Scientist at [Meta AI](https://ai.meta.com/), where I work on video diffusion models and generative rendering.
+I am an AI Research Scientist at [Meta AI](https://ai.meta.com/) London, where I work on video diffusion models and generative rendering.
 
 I received my Ph.D. in Computer Science from University of Surrey under the supervision of Prof. [Tao Xiang](http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html) and Prof. [Yi-Zhe Song](https://www.surrey.ac.uk/people/yi-zhe-song). I also work closely with Dr. [Xiatian (Eddy) Zhu](https://xiatian-zhu.github.io/).
 
@@ -26,7 +26,7 @@ My Projects
 ### Diffusion Models
 
 1. [PartCraft (ECCV 2024)](https://github.com/kamwoh/partcraft) - Crafting object by parts with text-to-image diffusion models.
-2. [Chirpy3D](https://github.com/kamwoh/chirpy3d) - Learning 3D object generation from 2D unposed images.
+2. [Chirpy3D](https://github.com/kamwoh/chirpy3d) - Learning 3D fine-grained object generation from 2D unposed images.
 
 ### Interpretable Fine-grained Hashing
 
