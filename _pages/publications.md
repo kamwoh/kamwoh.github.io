@@ -5,8 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-You can also find my articles in [my Google Scholar](https://scholar.google.com/citations?user=HxEQkLoAAAAJ&hl=en).
-(* indicates equal contribution. )
+No longer updating this page! You can find my articles/publications in [my Google Scholar](https://scholar.google.com/citations?user=HxEQkLoAAAAJ&hl=en).
 
 2022
 ------

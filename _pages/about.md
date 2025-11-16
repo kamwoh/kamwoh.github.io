@@ -10,9 +10,9 @@ redirect_from:
 
 I am an AI Research Scientist at [Meta AI](https://ai.meta.com/) London, where I work on video diffusion models and generative rendering.
 
-I received my Ph.D. in Computer Science from University of Surrey under the supervision of Prof. [Tao Xiang](http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html) and Prof. [Yi-Zhe Song](https://www.surrey.ac.uk/people/yi-zhe-song). I also work closely with Dr. [Xiatian (Eddy) Zhu](https://xiatian-zhu.github.io/).
+I received my Ph.D. in Computer Science from the University of Surrey, supervised by Prof. [Tao Xiang](http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html) and Prof. [Yi-Zhe Song](https://www.surrey.ac.uk/people/yi-zhe-song), and worked closely with Dr. [Xiatian (Eddy) Zhu](https://xiatian-zhu.github.io/).
 
-Prior to joining University of Surrey, I was an AI Researcher at WeBank under the lead of Dr. [Lixin Fan](https://scholar.google.fi/citations?user=fOsgdn0AAAAJ&hl=en) and I was a lab member of CISIP in [University of Malaya (UM)](https://um.edu.my/) under Prof.  [Chan Chee Seng](http://cs-chan.com/).
+I completed my Bachelor's degree in Computer Science (Artificial Intelligence) at the [University of Malaya (UM)](https://um.edu.my/), where I was a lab member of CISIP under Prof. [Chan Chee Seng](http://cs-chan.com/).
 
 You can contact me via *kamwoh \[at\] gmail.com*. Please see my CV at [here](https://kamwoh.github.io/files/cv.pdf).
 
