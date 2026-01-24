@@ -12,6 +12,9 @@ main:
   - title: "Portfolio"
     url: /portfolio/
 
+  - title: "Let's play a game"
+    url: /minigame/
+
   # - title: "Blog Posts"
   #   url: /year-archive/
 

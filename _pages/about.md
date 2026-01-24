@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an AI Research Scientist at [Meta AI](https://ai.meta.com/) London, where I work on video diffusion models and generative rendering.
+I am an AI Research Scientist at [Meta AI](https://ai.meta.com/) London, where I work on video diffusion models, generative rendering, and talking avatars.
 
 I received my Ph.D. in Computer Science from the University of Surrey, supervised by Prof. [Tao Xiang](http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html) and Prof. [Yi-Zhe Song](https://www.surrey.ac.uk/people/yi-zhe-song), and worked closely with Dr. [Xiatian (Eddy) Zhu](https://xiatian-zhu.github.io/).
 

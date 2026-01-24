@@ -91,6 +91,23 @@
       border: 1px solid $border-color;
     }
   }
+
+  // Flow-matching canvas animation styles
+  canvas.flow-matching-canvas {
+    max-width: 175px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+
+    @include breakpoint($large) {
+      padding: 5px;
+      border: 1px solid $border-color;
+    }
+
+    &:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
 .author__content {
