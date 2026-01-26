@@ -21,7 +21,7 @@ My Projects
 
 ### Generative Rendering
 
-1. [Kaleido](https://shikun.io/projects/kaleido) - A family of spatial generative models that achieves photorealistic, unified object- and scene-level neural rendering.
+1. [Kaleido (ICLR 2026)](https://shikun.io/projects/kaleido) - A family of spatial generative models that achieves photorealistic, unified object- and scene-level neural rendering.
 
 ### Diffusion Models
 
