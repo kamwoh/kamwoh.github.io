@@ -16,12 +16,16 @@ I completed my Bachelor's degree in Computer Science (Artificial Intelligence) a
 
 You can contact me via *kamwoh \[at\] gmail.com*. Please see my CV at [here](https://kamwoh.github.io/files/cv.pdf).
 
-My Projects
+Selected Publications
 ======
 
 ### Generative Rendering
 
 1. [Kaleido (ICLR 2026)](https://shikun.io/projects/kaleido) - A family of spatial generative models that achieves photorealistic, unified object- and scene-level neural rendering.
+
+### Multimodal Generation
+
+1. VecGlypher (CVPR 2026) - A unified multimodal language model that generates high-fidelity, editable vector glyphs directly from text descriptions or image exemplars, bypassing raster intermediates.
 
 ### Diffusion Models
 
