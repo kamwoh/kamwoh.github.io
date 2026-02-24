@@ -48,26 +48,6 @@ Selected Publications
 1. [DeepIPR (NeurIPS 2019)](https://github.com/kamwoh/DeepIPR) - Watermarking our DNNs by embedding "passport" and "signature".
 2. [IPR-GAN (CVPR 2022)](https://github.com/dingsheng-ong/ipr-gan) - Protecting our GANs by generating watermarked images.
 
-Review Experiences
-======
-- NeurIPS 2025
-- ICML 2025
-- ICLR 2025
-- AISTATS 2025
-- AAAI 2025
-- NeurIPS 2024
-- ECCV 2024
-- IJCV
-- CVPR 2024
-- ICLR 2024
-- NeurIPS 2023
-- CVPR 2023
-- AAAI 2023
-- ECCV 2022
-- CVPR 2022
-- ICME 2022
-- AAAI 2021
-- CVPR 2021
 
 <!-- Recent Updates
 ======
