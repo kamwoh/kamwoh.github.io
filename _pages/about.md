@@ -25,7 +25,7 @@ Selected Publications
 
 ### Multimodal Generation
 
-1. [VecGlypher](https://arxiv.org/abs/2602.21461) (CVPR 2026) - A unified multimodal language model that generates high-fidelity, editable vector glyphs directly from text descriptions or image exemplars, bypassing raster intermediates.
+1. [VecGlypher (CVPR 2026)](https://arxiv.org/abs/2602.21461) - A unified multimodal language model that generates high-fidelity, editable vector glyphs directly from text descriptions or image exemplars, bypassing raster intermediates.
 
 ### Diffusion Models
 
