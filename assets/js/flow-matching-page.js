@@ -1,6 +1,6 @@
 /**
- * Flow-Matching Noise-to-Page Animation
- * Shows colorful RGB noise that fades to transparent, revealing the page underneath
+ * Claude Code Loading Animation
+ * Simulates a Claude Code terminal building the website
  * Only plays on the main page (homepage)
  */
 (function() {
@@ -12,137 +12,254 @@
     return;
   }
 
-  // Configuration
-  const CONFIG = {
-    duration: 1000,         // Fade duration in ms
-    totalSteps: 50,         // Total denoising steps
-    easing: 'easeInCubic'   // Slow at start, fast at end
-  };
+  // Braille spinner frames (Claude Code style)
+  const SPINNER = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
 
-  // Easing functions
-  const easingFunctions = {
-    linear: t => t,
-    easeInCubic: t => t * t * t,
-    easeInQuad: t => t * t,
-    easeOutCubic: t => 1 - Math.pow(1 - t, 3),
-    easeOutQuad: t => 1 - (1 - t) * (1 - t)
-  };
+  // Tasks to display
+  const TASKS = [
+    { text: 'Reading _pages/about.md', duration: 280 },
+    { text: 'Loading publications...', duration: 250 },
+    { text: 'Rendering research papers...', duration: 300 },
+    { text: 'Compiling stylesheets...', duration: 220 },
+    { text: 'Building page layout...', duration: 260 },
+  ];
 
-  // Generate colorful RGB noise
-  function generateColorfulNoise(width, height) {
-    const imageData = new ImageData(width, height);
-    const data = imageData.data;
-
-    for (let i = 0; i < data.length; i += 4) {
-      data[i] = Math.floor(Math.random() * 256);     // R
-      data[i + 1] = Math.floor(Math.random() * 256); // G
-      data[i + 2] = Math.floor(Math.random() * 256); // B
-      data[i + 3] = 255; // A
-    }
-
-    return imageData;
-  }
-
-  class FlowMatchingPage {
+  class ClaudeCodeLoader {
     constructor() {
-      this.canvas = null;
-      this.ctx = null;
-      this.textDiv = null;
-      this.noiseData = null;
-      this.width = 0;
-      this.height = 0;
-
+      this.overlay = null;
+      this.terminal = null;
+      this.linesContainer = null;
+      this.spinnerInterval = null;
+      this.currentSpinnerFrame = 0;
       this.init();
     }
 
     init() {
       this.createOverlay();
-
-      // Start fade animation when page is ready
       if (document.readyState === 'complete') {
-        this.animate();
+        this.runSequence();
       } else {
-        window.addEventListener('load', () => this.animate());
+        window.addEventListener('load', () => this.runSequence());
       }
     }
 
     createOverlay() {
-      this.width = window.innerWidth;
-      this.height = window.innerHeight;
+      // Inject styles
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+        @keyframes fadeSlideUp {
+          0% { opacity: 1; transform: translateY(0); }
+          100% { opacity: 0; transform: translateY(-30px); }
+        }
+        #claude-loader-overlay {
+          position: fixed;
+          top: 0; left: 0;
+          width: 100vw; height: 100vh;
+          background: #1a1a2e;
+          z-index: 99999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, monospace;
+        }
+        #claude-loader-overlay.fade-out {
+          animation: fadeSlideUp 400ms ease-in forwards;
+        }
+        #claude-terminal {
+          width: min(600px, 90vw);
+          color: #e8e0d4;
+          font-size: 15px;
+          line-height: 1.7;
+          padding: 20px;
+        }
+        .cl-prompt {
+          color: #d97706;
+          font-weight: bold;
+        }
+        .cl-command {
+          color: #e8e0d4;
+        }
+        .cl-cursor {
+          display: inline-block;
+          width: 8px;
+          height: 17px;
+          background: #d97706;
+          margin-left: 2px;
+          vertical-align: text-bottom;
+          animation: blink 800ms step-end infinite;
+        }
+        .cl-task-line {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin: 2px 0;
+          opacity: 0;
+          transition: opacity 100ms;
+        }
+        .cl-task-line.visible {
+          opacity: 1;
+        }
+        .cl-spinner {
+          color: #6366f1;
+          width: 14px;
+          text-align: center;
+        }
+        .cl-check {
+          color: #4ade80;
+          width: 14px;
+          text-align: center;
+        }
+        .cl-task-text {
+          color: #9ca3af;
+        }
+        .cl-task-line.done .cl-task-text {
+          color: #e8e0d4;
+        }
+        .cl-done-line {
+          margin-top: 8px;
+          opacity: 0;
+          transition: opacity 200ms;
+        }
+        .cl-done-line.visible {
+          opacity: 1;
+        }
+        .cl-done-check {
+          color: #4ade80;
+          font-weight: bold;
+        }
+        .cl-done-text {
+          color: #e8e0d4;
+          font-weight: bold;
+        }
 
-      // Create overlay canvas
-      this.canvas = document.createElement('canvas');
-      this.canvas.id = 'flow-matching-overlay';
-      this.canvas.width = this.width;
-      this.canvas.height = this.height;
-      this.canvas.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 99999;
-        pointer-events: none;
+        /* Scanline overlay */
+        #claude-loader-overlay::after {
+          content: '';
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background: repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.03) 2px,
+            rgba(0, 0, 0, 0.03) 4px
+          );
+          pointer-events: none;
+        }
       `;
+      document.head.appendChild(style);
 
-      // Create text overlay for step counter
-      this.textDiv = document.createElement('div');
-      this.textDiv.id = 'flow-matching-text';
-      this.textDiv.style.cssText = `
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 100000;
-        pointer-events: none;
-        font-family: monospace;
-        font-size: 24px;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-        white-space: nowrap;
-      `;
-      this.textDiv.textContent = 'Denoising the website [0/50]';
+      // Create overlay
+      this.overlay = document.createElement('div');
+      this.overlay.id = 'claude-loader-overlay';
 
-      document.documentElement.appendChild(this.canvas);
-      document.documentElement.appendChild(this.textDiv);
-      this.ctx = this.canvas.getContext('2d');
+      // Create terminal
+      this.terminal = document.createElement('div');
+      this.terminal.id = 'claude-terminal';
 
-      // Generate and store noise data
-      this.noiseData = generateColorfulNoise(this.width, this.height);
-      this.ctx.putImageData(this.noiseData, 0, 0);
+      // Prompt line
+      const promptLine = document.createElement('div');
+      promptLine.id = 'cl-prompt-line';
+      promptLine.innerHTML = '<span class="cl-prompt">&gt; </span><span class="cl-command" id="cl-typed-text"></span><span class="cl-cursor" id="cl-cursor"></span>';
+      this.terminal.appendChild(promptLine);
+
+      // Lines container for tasks
+      this.linesContainer = document.createElement('div');
+      this.linesContainer.id = 'cl-lines';
+      this.terminal.appendChild(this.linesContainer);
+
+      this.overlay.appendChild(this.terminal);
+      document.documentElement.appendChild(this.overlay);
     }
 
-    animate() {
-      const startTime = performance.now();
-      const easing = easingFunctions[CONFIG.easing] || easingFunctions.linear;
+    sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
-      const tick = (currentTime) => {
-        const elapsed = currentTime - startTime;
-        const rawProgress = Math.min(elapsed / CONFIG.duration, 1);
-        const t = easing(rawProgress);
+    async typeText(text, speed) {
+      const el = document.getElementById('cl-typed-text');
+      for (let i = 0; i < text.length; i++) {
+        el.textContent += text[i];
+        await this.sleep(speed);
+      }
+    }
 
-        // Calculate current step (0 to 50)
-        const currentStep = Math.floor(rawProgress * CONFIG.totalSteps);
+    startSpinner(spinnerEl) {
+      this.currentSpinnerFrame = 0;
+      this.spinnerInterval = setInterval(() => {
+        this.currentSpinnerFrame = (this.currentSpinnerFrame + 1) % SPINNER.length;
+        spinnerEl.textContent = SPINNER[this.currentSpinnerFrame];
+      }, 80);
+    }
 
-        // Update step counter text
-        this.textDiv.textContent = `Denoising the website [${currentStep}/${CONFIG.totalSteps}]`;
+    stopSpinner() {
+      if (this.spinnerInterval) {
+        clearInterval(this.spinnerInterval);
+        this.spinnerInterval = null;
+      }
+    }
 
-        // Fade noise opacity, but keep text fully visible
-        this.canvas.style.opacity = 1 - t;
+    async runSequence() {
+      // Phase 1: Type the command
+      await this.sleep(200);
+      await this.typeText('Building kamwoh.github.io...', 30);
 
-        if (rawProgress < 1) {
-          requestAnimationFrame(tick);
-        } else {
-          // Remove both elements when done
-          this.canvas.remove();
-          this.textDiv.remove();
-        }
-      };
+      // Hide cursor after typing
+      const cursor = document.getElementById('cl-cursor');
+      cursor.style.display = 'none';
 
-      requestAnimationFrame(tick);
+      await this.sleep(200);
+
+      // Phase 2: Show tasks one by one
+      for (let i = 0; i < TASKS.length; i++) {
+        const task = TASKS[i];
+
+        // Create task line
+        const line = document.createElement('div');
+        line.className = 'cl-task-line';
+        line.innerHTML = `
+          <span class="cl-spinner" id="cl-spinner-${i}">${SPINNER[0]}</span>
+          <span class="cl-task-text">${task.text}</span>
+        `;
+        this.linesContainer.appendChild(line);
+
+        // Show line
+        requestAnimationFrame(() => line.classList.add('visible'));
+
+        // Start spinner
+        const spinnerEl = document.getElementById(`cl-spinner-${i}`);
+        this.startSpinner(spinnerEl);
+
+        // Wait for task duration
+        await this.sleep(task.duration);
+
+        // Complete task
+        this.stopSpinner();
+        line.classList.add('done');
+        spinnerEl.outerHTML = '<span class="cl-check">✓</span>';
+      }
+
+      // Phase 3: Done message
+      await this.sleep(150);
+      const doneLine = document.createElement('div');
+      doneLine.className = 'cl-done-line';
+      doneLine.innerHTML = '<span class="cl-done-check">✓</span> <span class="cl-done-text">Site ready.</span>';
+      this.linesContainer.appendChild(doneLine);
+      requestAnimationFrame(() => doneLine.classList.add('visible'));
+
+      // Phase 4: Fade out
+      await this.sleep(350);
+      this.overlay.classList.add('fade-out');
+      await this.sleep(400);
+      this.overlay.remove();
     }
   }
 
   // Start immediately
-  new FlowMatchingPage();
+  new ClaudeCodeLoader();
 })();

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kam Woh Ng</title>
+  <meta name="description" content="AI Research Scientist at Meta AI. Research in video diffusion models, generative rendering, and talking avatars.">
+  <meta property="og:title" content="Kam Woh Ng">
+  <meta property="og:description" content="AI Research Scientist at Meta AI London">
+  <meta property="og:url" content="https://kamwoh.github.io">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===== Loading overlay ===== -->
+  <div id="loader" class="loader">
+    <div class="loader__terminal">
+      <div class="loader__line">
+        <span class="loader__prompt">&gt; </span>
+        <span class="loader__typed" id="loader-typed"></span>
+        <span class="loader__cursor" id="loader-cursor"></span>
+      </div>
+      <div id="loader-tasks"></div>
+    </div>
+  </div>
+
+  <!-- ===== Main site (hidden until loader finishes) ===== -->
+  <div id="site" class="site hidden">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="topbar__inner">
+        <span class="topbar__name">kamwoh.github.io</span>
+        <nav class="topbar__nav">
+          <a href="#about">About</a>
+          <a href="#publications">Publications</a>
+          <a href="/files/cv.pdf" target="_blank">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Content wrapper -->
+    <main class="main">
+
+      <!-- Profile section -->
+      <section id="about" class="profile">
+        <div class="profile__card">
+          <img src="/images/profile.png" alt="Kam Woh Ng" class="profile__avatar">
+          <h1 class="profile__name">Kam Woh Ng</h1>
+          <p class="profile__role">AI Research Scientist @ Meta AI</p>
+          <p class="profile__location">London, UK</p>
+          <div class="profile__links">
+            <a href="mailto:kamwoh@gmail.com" class="profile__link" title="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Email</span>
+            </a>
+            <a href="https://github.com/kamwoh" class="profile__link" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://scholar.google.com/citations?user=HxEQkLoAAAAJ&hl=en" class="profile__link" title="Google Scholar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+              <span>Scholar</span>
+            </a>
+            <a href="https://www.linkedin.com/in/thomas-ng-kam-woh" class="profile__link" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://twitter.com/kam_woh" class="profile__link" title="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <span>Twitter</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="profile__bio">
+          <div class="terminal-block">
+            <div class="terminal-block__header">
+              <span class="terminal-block__icon">&#9656;</span>
+              <span class="terminal-block__title">about.md</span>
+            </div>
+            <div class="terminal-block__body">
+              <p>I am an AI Research Scientist at <a href="https://ai.meta.com/">Meta AI</a> London, where I work on <strong>video diffusion models</strong>, <strong>generative rendering</strong>, and <strong>talking avatars</strong>.</p>
+              <p>I received my Ph.D. in Computer Science from the <a href="https://www.surrey.ac.uk/">University of Surrey</a>, supervised by Prof. <a href="http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html">Tao Xiang</a> and Prof. <a href="https://www.surrey.ac.uk/people/yi-zhe-song">Yi-Zhe Song</a>, and worked closely with Dr. <a href="https://xiatian-zhu.github.io/">Xiatian (Eddy) Zhu</a>.</p>
+              <p>I completed my Bachelor's degree in Computer Science (Artificial Intelligence) at the <a href="https://um.edu.my/">University of Malaya</a>, where I was a lab member of CISIP under Prof. <a href="http://cs-chan.com/">Chan Chee Seng</a>.</p>
+              <p>Contact: <code>kamwoh [at] gmail.com</code></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Publications section -->
+      <section id="publications" class="publications">
+        <h2 class="section-title">
+          <span class="section-title__prompt">&gt;</span>
+          Selected Publications
+        </h2>
+
+        <!-- Generative Rendering -->
+        <div class="pub-group">
+          <button class="pub-group__toggle" aria-expanded="true">
+            <span class="pub-group__arrow">&#9662;</span>
+            Generative Rendering
+          </button>
+          <div class="pub-group__list">
+            <div class="pub-card">
+              <div class="pub-card__venue">ICLR 2026</div>
+              <h3 class="pub-card__title"><a href="https://shikun.io/projects/kaleido">Kaleido</a></h3>
+              <p class="pub-card__desc">A family of spatial generative models that achieves photorealistic, unified object- and scene-level neural rendering.</p>
+              <div class="pub-card__links">
+                <a href="https://shikun.io/projects/kaleido" class="pub-card__link">Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Multimodal Generation -->
+        <div class="pub-group">
+          <button class="pub-group__toggle" aria-expanded="true">
+            <span class="pub-group__arrow">&#9662;</span>
+            Multimodal Generation
+          </button>
+          <div class="pub-group__list">
+            <div class="pub-card">
+              <div class="pub-card__venue">CVPR 2026</div>
+              <h3 class="pub-card__title"><a href="https://arxiv.org/abs/2602.21461">VecGlypher</a></h3>
+              <p class="pub-card__desc">A unified multimodal language model that generates high-fidelity, editable vector glyphs directly from text descriptions or image exemplars, bypassing raster intermediates.</p>
+              <div class="pub-card__links">
+                <a href="https://arxiv.org/abs/2602.21461" class="pub-card__link">arXiv</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diffusion Models -->
+        <div class="pub-group">
+          <button class="pub-group__toggle" aria-expanded="true">
+            <span class="pub-group__arrow">&#9662;</span>
+            Diffusion Models
+          </button>
+          <div class="pub-group__list">
+            <div class="pub-card">
+              <div class="pub-card__venue">ECCV 2024</div>
+              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/partcraft">PartCraft</a></h3>
+              <p class="pub-card__desc">Crafting object by parts with text-to-image diffusion models.</p>
+              <div class="pub-card__links">
+                <a href="https://github.com/kamwoh/partcraft" class="pub-card__link">Code</a>
+              </div>
+            </div>
+            <div class="pub-card">
+              <div class="pub-card__venue">Preprint</div>
+              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/chirpy3d">Chirpy3D</a></h3>
+              <p class="pub-card__desc">Learning 3D fine-grained object generation from 2D unposed images.</p>
+              <div class="pub-card__links">
+                <a href="https://github.com/kamwoh/chirpy3d" class="pub-card__link">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interpretable Fine-grained Hashing -->
+        <div class="pub-group">
+          <button class="pub-group__toggle" aria-expanded="true">
+            <span class="pub-group__arrow">&#9662;</span>
+            Interpretable Fine-grained Hashing
+          </button>
+          <div class="pub-group__list">
+            <div class="pub-card">
+              <div class="pub-card__venue">CVPRW 2024 <span class="pub-card__award">Best Paper</span></div>
+              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/concepthash">ConceptHash</a></h3>
+              <p class="pub-card__desc">Learning to encode parts into interpretable codes.</p>
+              <div class="pub-card__links">
+                <a href="https://github.com/kamwoh/concepthash" class="pub-card__link">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deep Hashing for Image Retrieval -->
+        <div class="pub-group">
+          <button class="pub-group__toggle" aria-expanded="true">
+            <span class="pub-group__arrow">&#9662;</span>
+            Deep Hashing for Image Retrieval
+          </button>
+          <div class="pub-group__list">
+            <div class="pub-card">
+              <div class="pub-card__venue">IJCAI 2020</div>
+              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/DPN">DPN</a></h3>
+              <p class="pub-card__desc">Bit-wise hinge loss with random orthogonal codebook.</p>
+              <div class="pub-card__links">
+                <a href="https://github.com/kamwoh/DPN" class="pub-card__link">Code</a>
+              </div>
+            </div>
+            <div class="pub-card">
+              <div class="pub-card__venue">NeurIPS 2021</div>
+              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/orthohash">OrthoHash</a></h3>
+              <p class="pub-card__desc">Cross entropy loss with random orthogonal codebook.</p>
+              <div class="pub-card__links">
+                <a href="https://github.com/kamwoh/orthohash" class="pub-card__link">Code</a>
+              </div>
+            </div>
+            <div class="pub-card">
+              <div class="pub-card__venue">Open Source</div>
+              <h3 class="pub-card__title"><a href="https://github.com/CISiPLab/cisip-FIRe">FIRe</a></h3>
+              <p class="pub-card__desc">Open source Fast Image Retrieval framework.</p>
+              <div class="pub-card__links">
+                <a href="https://github.com/CISiPLab/cisip-FIRe" class="pub-card__link">Code</a>
+              </div>
+            </div>
+            <div class="pub-card">
+              <div class="pub-card__venue">BMVC 2023 <span class="pub-card__award">Oral</span></div>
+              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/sdc">SDC</a></h3>
+              <p class="pub-card__desc">Unsupervised hashing by maximizing the utilization of hash spaces through Wasserstein distance.</p>
+              <div class="pub-card__links">
+                <a href="https://github.com/kamwoh/sdc" class="pub-card__link">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deep Watermarking -->
+        <div class="pub-group">
+          <button class="pub-group__toggle" aria-expanded="true">
+            <span class="pub-group__arrow">&#9662;</span>
+            Deep Watermarking
+          </button>
+          <div class="pub-group__list">
+            <div class="pub-card">
+              <div class="pub-card__venue">NeurIPS 2019</div>
+              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/DeepIPR">DeepIPR</a></h3>
+              <p class="pub-card__desc">Watermarking our DNNs by embedding "passport" and "signature".</p>
+              <div class="pub-card__links">
+                <a href="https://github.com/kamwoh/DeepIPR" class="pub-card__link">Code</a>
+                <a href="https://kamwoh.github.io/DeepIPR/" class="pub-card__link">Website</a>
+              </div>
+            </div>
+            <div class="pub-card">
+              <div class="pub-card__venue">CVPR 2022</div>
+              <h3 class="pub-card__title"><a href="https://github.com/dingsheng-ong/ipr-gan">IPR-GAN</a></h3>
+              <p class="pub-card__desc">Protecting our GANs by generating watermarked images.</p>
+              <div class="pub-card__links">
+                <a href="https://github.com/dingsheng-ong/ipr-gan" class="pub-card__link">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <span class="footer__prompt">&gt;</span>
+        <span class="footer__text">Built with Claude Code</span>
+        <span class="footer__sep">|</span>
+        <span class="footer__text">&copy; 2026 Kam Woh Ng</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
