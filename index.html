@@ -36,6 +36,7 @@
         <span class="topbar__name">kamwoh.github.io</span>
         <nav class="topbar__nav">
           <a href="#about">About</a>
+          <a href="#journey">Journey</a>
           <a href="#publications">Publications</a>
           <a href="/files/cv.pdf" target="_blank">CV</a>
         </nav>
@@ -92,159 +93,233 @@
         </div>
       </section>
 
-      <!-- Publications section -->
+      <!-- Research Journey -->
+      <section id="journey" class="journey">
+        <h2 class="section-title">
+          <span class="section-title__prompt">&gt;</span>
+          Research Journey
+        </h2>
+
+        <div class="timeline">
+
+          <div class="timeline__item" data-year="2026">
+            <div class="timeline__node timeline__node--new"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2026</span>
+              <h3 class="timeline__title">Training LMs for Vector Graphics</h3>
+              <p class="timeline__desc">Applied structured spatial generation to a new modality. VecGlypher fine-tunes multimodal LLMs to directly emit SVG path commands — no raster intermediate — via a two-stage curriculum (syntax mastery, then style refinement), producing editable vector glyphs from text or image exemplars.</p>
+              <div class="timeline__papers">
+                <a href="https://arxiv.org/abs/2602.21461" class="timeline__paper timeline__paper--new">VecGlypher <span>CVPR 2026</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">structured spatial tokens</span>
+          </div>
+
+          <div class="timeline__item" data-year="2026">
+            <div class="timeline__node timeline__node--new"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2025 &ndash; 2026</span>
+              <h3 class="timeline__title">Generative Neural Rendering</h3>
+              <p class="timeline__desc">Moved beyond per-object NeRF distillation to a unified rendering paradigm. Kaleido is a sequence-to-sequence transformer that directly synthesises novel views — no explicit 3D representations, no per-scene optimisation — pre-trained on video, then fine-tuned for zero-shot novel view synthesis.</p>
+              <div class="timeline__papers">
+                <a href="https://shikun.io/projects/kaleido" class="timeline__paper timeline__paper--new">Kaleido <span>ICLR 2026</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">per-object NeRF &rarr; end-to-end rendering</span>
+          </div>
+
+          <div class="timeline__item" data-year="2024">
+            <div class="timeline__node timeline__node--highlight"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2024 &ndash; 2025</span>
+              <h3 class="timeline__title">Learning 3D from Unposed 2D</h3>
+              <p class="timeline__desc">Lifted PartCraft's part-aware generation into 3D. Chirpy3D fine-tunes multi-view diffusion models with LoRA, learns a continuous part latent space, and distils part-controlled views into NeRF — generating fine-grained 3D objects from unposed 2D images alone.</p>
+              <div class="timeline__papers">
+                <a href="https://github.com/kamwoh/chirpy3d" class="timeline__paper">Chirpy3D <span>Preprint</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">2D attention &rarr; 3D distillation</span>
+          </div>
+
+          <div class="timeline__item" data-year="2024">
+            <div class="timeline__node timeline__node--highlight"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2024</span>
+              <h3 class="timeline__title">Controlling Diffusion Models</h3>
+              <p class="timeline__desc">ConceptHash showed that parts can be encoded separately — but can we also <em>generate</em> by parts? PartCraft answers yes: entropy-based attention losses steer cross-attention so each part token controls its own spatial region, enabling compositional image generation from part-level descriptions.</p>
+              <div class="timeline__papers">
+                <a href="https://github.com/kamwoh/partcraft" class="timeline__paper">PartCraft <span>ECCV 2024</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">part-based encoding &rarr; part-based generation</span>
+          </div>
+
+          <div class="timeline__item" data-year="2023">
+            <div class="timeline__node"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2023 &ndash; 2024</span>
+              <h3 class="timeline__title">Tackling Core Hashing Problems</h3>
+              <p class="timeline__desc">Addressed fundamental hashing challenges: SDC solved similarity collapse in unsupervised hashing via Wasserstein-calibrated distributions; FIRe unified benchmarking; ConceptHash made codes interpretable — each sub-code attends to a discoverable visual part, turning hash bits into semantic concepts.</p>
+              <div class="timeline__papers">
+                <a href="https://github.com/kamwoh/sdc" class="timeline__paper">SDC <span>BMVC 2023 Oral</span></a>
+                <a href="https://github.com/CISiPLab/cisip-FIRe" class="timeline__paper">FIRe <span>Open Source</span></a>
+                <a href="https://github.com/kamwoh/concepthash" class="timeline__paper">ConceptHash <span>CVPRW 2024 Best Paper</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">distribution &rarr; parts &rarr; interpretability</span>
+          </div>
+
+          <div class="timeline__item" data-year="2020">
+            <div class="timeline__node"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2020 &ndash; 2021</span>
+              <h3 class="timeline__title">Deep Hashing for Image Retrieval</h3>
+              <p class="timeline__desc">The orthogonal binary codes used in watermarking map directly to hashing — both need compact codes with maximum Hamming separation. DPN introduced central similarity with orthogonal class centres; OrthoHash distilled it to a single cosine objective, proving the codebook alone drives retrieval performance.</p>
+              <div class="timeline__papers">
+                <a href="https://github.com/kamwoh/DPN" class="timeline__paper">DPN <span>IJCAI 2020</span></a>
+                <a href="https://github.com/kamwoh/orthohash" class="timeline__paper">OrthoHash <span>NeurIPS 2021</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">binary signatures &rarr; binary codes</span>
+          </div>
+
+          <div class="timeline__item" data-year="2020">
+            <div class="timeline__node"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2020 &ndash; 2022</span>
+              <h3 class="timeline__title">Watermarking DNN Outputs</h3>
+              <p class="timeline__desc">Extended ownership protection from model weights to model outputs. IPR-GAN embeds both white-box signatures in GAN weights and black-box watermarks in generated images, enabling dual verification without sacrificing visual quality.</p>
+              <div class="timeline__papers">
+                <a href="https://github.com/dingsheng-ong/ipr-gan" class="timeline__paper">IPR-GAN <span>CVPR 2022</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">weights &rarr; outputs</span>
+          </div>
+
+          <div class="timeline__item" data-year="2019">
+            <div class="timeline__node"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2019</span>
+              <h3 class="timeline__title">Watermarking DNN Weights</h3>
+              <p class="timeline__desc">Started by studying how to protect DNN intellectual property. DeepIPR embeds learnable "passport" layers into normalization parameters — the model only produces correct outputs with the right passport, defeating ambiguity attacks without degrading performance.</p>
+              <div class="timeline__papers">
+                <a href="https://github.com/kamwoh/DeepIPR" class="timeline__paper">DeepIPR <span>NeurIPS 2019</span></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Publications (compact reference) -->
       <section id="publications" class="publications">
         <h2 class="section-title">
           <span class="section-title__prompt">&gt;</span>
           Selected Publications
         </h2>
 
-        <!-- Generative Rendering -->
-        <div class="pub-group">
-          <button class="pub-group__toggle" aria-expanded="true">
-            <span class="pub-group__arrow">&#9662;</span>
-            Generative Rendering
-          </button>
-          <div class="pub-group__list">
-            <div class="pub-card">
-              <div class="pub-card__venue">ICLR 2026</div>
-              <h3 class="pub-card__title"><a href="https://shikun.io/projects/kaleido">Kaleido</a></h3>
-              <p class="pub-card__desc">A family of spatial generative models that achieves photorealistic, unified object- and scene-level neural rendering.</p>
-              <div class="pub-card__links">
-                <a href="https://shikun.io/projects/kaleido" class="pub-card__link">Project</a>
-              </div>
-            </div>
+        <div class="pubref">
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--top">ICLR 2026</span>
+            <a href="https://shikun.io/projects/kaleido" class="pubref__name">Kaleido</a>
+            <span class="pub__new">New</span>
+            <span class="pubref__sep">&mdash;</span>
+            <span class="pubref__blurb">Unified neural rendering via spatial generative models</span>
+            <div class="pubref__links"><a href="https://shikun.io/projects/kaleido">Project</a></div>
           </div>
-        </div>
-
-        <!-- Multimodal Generation -->
-        <div class="pub-group">
-          <button class="pub-group__toggle" aria-expanded="true">
-            <span class="pub-group__arrow">&#9662;</span>
-            Multimodal Generation
-          </button>
-          <div class="pub-group__list">
-            <div class="pub-card">
-              <div class="pub-card__venue">CVPR 2026</div>
-              <h3 class="pub-card__title"><a href="https://arxiv.org/abs/2602.21461">VecGlypher</a></h3>
-              <p class="pub-card__desc">A unified multimodal language model that generates high-fidelity, editable vector glyphs directly from text descriptions or image exemplars, bypassing raster intermediates.</p>
-              <div class="pub-card__links">
-                <a href="https://arxiv.org/abs/2602.21461" class="pub-card__link">arXiv</a>
-              </div>
-            </div>
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--top">CVPR 2026</span>
+            <a href="https://arxiv.org/abs/2602.21461" class="pubref__name">VecGlypher</a>
+            <span class="pub__new">New</span>
+            <span class="pubref__sep">&mdash;</span>
+            <span class="pubref__blurb">LLM-based vector glyph generation from text/image</span>
+            <div class="pubref__links"><a href="https://arxiv.org/abs/2602.21461">arXiv</a></div>
           </div>
-        </div>
-
-        <!-- Diffusion Models -->
-        <div class="pub-group">
-          <button class="pub-group__toggle" aria-expanded="true">
-            <span class="pub-group__arrow">&#9662;</span>
-            Diffusion Models
-          </button>
-          <div class="pub-group__list">
-            <div class="pub-card">
-              <div class="pub-card__venue">ECCV 2024</div>
-              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/partcraft">PartCraft</a></h3>
-              <p class="pub-card__desc">Crafting object by parts with text-to-image diffusion models.</p>
-              <div class="pub-card__links">
-                <a href="https://github.com/kamwoh/partcraft" class="pub-card__link">Code</a>
-              </div>
-            </div>
-            <div class="pub-card">
-              <div class="pub-card__venue">Preprint</div>
-              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/chirpy3d">Chirpy3D</a></h3>
-              <p class="pub-card__desc">Learning 3D fine-grained object generation from 2D unposed images.</p>
-              <div class="pub-card__links">
-                <a href="https://github.com/kamwoh/chirpy3d" class="pub-card__link">Code</a>
-              </div>
-            </div>
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--top">ECCV 2024</span>
+            <a href="https://github.com/kamwoh/partcraft" class="pubref__name">PartCraft</a>
+            <span class="pubref__sep">&mdash;</span>
+            <span class="pubref__blurb">Part-based compositional image generation via attention control</span>
+            <div class="pubref__links"><a href="https://github.com/kamwoh/partcraft">Code</a></div>
           </div>
-        </div>
-
-        <!-- Interpretable Fine-grained Hashing -->
-        <div class="pub-group">
-          <button class="pub-group__toggle" aria-expanded="true">
-            <span class="pub-group__arrow">&#9662;</span>
-            Interpretable Fine-grained Hashing
-          </button>
-          <div class="pub-group__list">
-            <div class="pub-card">
-              <div class="pub-card__venue">CVPRW 2024 <span class="pub-card__award">Best Paper</span></div>
-              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/concepthash">ConceptHash</a></h3>
-              <p class="pub-card__desc">Learning to encode parts into interpretable codes.</p>
-              <div class="pub-card__links">
-                <a href="https://github.com/kamwoh/concepthash" class="pub-card__link">Code</a>
-              </div>
-            </div>
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--award">CVPRW 2024</span>
+            <a href="https://github.com/kamwoh/concepthash" class="pubref__name">ConceptHash</a>
+            <span class="pub__award">Best Paper</span>
+            <span class="pubref__sep">&mdash;</span>
+            <span class="pubref__blurb">Interpretable hashing via part-based concept encoding</span>
+            <div class="pubref__links"><a href="https://github.com/kamwoh/concepthash">Code</a></div>
           </div>
-        </div>
-
-        <!-- Deep Hashing for Image Retrieval -->
-        <div class="pub-group">
-          <button class="pub-group__toggle" aria-expanded="true">
-            <span class="pub-group__arrow">&#9662;</span>
-            Deep Hashing for Image Retrieval
-          </button>
-          <div class="pub-group__list">
-            <div class="pub-card">
-              <div class="pub-card__venue">IJCAI 2020</div>
-              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/DPN">DPN</a></h3>
-              <p class="pub-card__desc">Bit-wise hinge loss with random orthogonal codebook.</p>
-              <div class="pub-card__links">
-                <a href="https://github.com/kamwoh/DPN" class="pub-card__link">Code</a>
-              </div>
-            </div>
-            <div class="pub-card">
-              <div class="pub-card__venue">NeurIPS 2021</div>
-              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/orthohash">OrthoHash</a></h3>
-              <p class="pub-card__desc">Cross entropy loss with random orthogonal codebook.</p>
-              <div class="pub-card__links">
-                <a href="https://github.com/kamwoh/orthohash" class="pub-card__link">Code</a>
-              </div>
-            </div>
-            <div class="pub-card">
-              <div class="pub-card__venue">Open Source</div>
-              <h3 class="pub-card__title"><a href="https://github.com/CISiPLab/cisip-FIRe">FIRe</a></h3>
-              <p class="pub-card__desc">Open source Fast Image Retrieval framework.</p>
-              <div class="pub-card__links">
-                <a href="https://github.com/CISiPLab/cisip-FIRe" class="pub-card__link">Code</a>
-              </div>
-            </div>
-            <div class="pub-card">
-              <div class="pub-card__venue">BMVC 2023 <span class="pub-card__award">Oral</span></div>
-              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/sdc">SDC</a></h3>
-              <p class="pub-card__desc">Unsupervised hashing by maximizing the utilization of hash spaces through Wasserstein distance.</p>
-              <div class="pub-card__links">
-                <a href="https://github.com/kamwoh/sdc" class="pub-card__link">Code</a>
-              </div>
-            </div>
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--award">BMVC 2023</span>
+            <a href="https://github.com/kamwoh/sdc" class="pubref__name">SDC</a>
+            <span class="pub__award">Oral</span>
+            <span class="pubref__sep">&mdash;</span>
+            <span class="pubref__blurb">Similarity distribution calibration for unsupervised hashing</span>
+            <div class="pubref__links"><a href="https://github.com/kamwoh/sdc">Code</a></div>
           </div>
-        </div>
-
-        <!-- Deep Watermarking -->
-        <div class="pub-group">
-          <button class="pub-group__toggle" aria-expanded="true">
-            <span class="pub-group__arrow">&#9662;</span>
-            Deep Watermarking
-          </button>
-          <div class="pub-group__list">
-            <div class="pub-card">
-              <div class="pub-card__venue">NeurIPS 2019</div>
-              <h3 class="pub-card__title"><a href="https://github.com/kamwoh/DeepIPR">DeepIPR</a></h3>
-              <p class="pub-card__desc">Watermarking our DNNs by embedding "passport" and "signature".</p>
-              <div class="pub-card__links">
-                <a href="https://github.com/kamwoh/DeepIPR" class="pub-card__link">Code</a>
-                <a href="https://kamwoh.github.io/DeepIPR/" class="pub-card__link">Website</a>
-              </div>
-            </div>
-            <div class="pub-card">
-              <div class="pub-card__venue">CVPR 2022</div>
-              <h3 class="pub-card__title"><a href="https://github.com/dingsheng-ong/ipr-gan">IPR-GAN</a></h3>
-              <p class="pub-card__desc">Protecting our GANs by generating watermarked images.</p>
-              <div class="pub-card__links">
-                <a href="https://github.com/dingsheng-ong/ipr-gan" class="pub-card__link">Code</a>
-              </div>
-            </div>
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--top">CVPR 2022</span>
+            <a href="https://github.com/dingsheng-ong/ipr-gan" class="pubref__name">IPR-GAN</a>
+            <span class="pubref__sep">&mdash;</span>
+            <span class="pubref__blurb">Dual white-box/black-box GAN watermarking</span>
+            <div class="pubref__links"><a href="https://github.com/dingsheng-ong/ipr-gan">Code</a></div>
+          </div>
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--top">NeurIPS 2021</span>
+            <a href="https://github.com/kamwoh/orthohash" class="pubref__name">OrthoHash</a>
+            <span class="pubref__sep">&mdash;</span>
+            <span class="pubref__blurb">One-loss hashing with orthogonal codebook</span>
+            <div class="pubref__links"><a href="https://github.com/kamwoh/orthohash">Code</a></div>
+          </div>
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--top">IJCAI 2020</span>
+            <a href="https://github.com/kamwoh/DPN" class="pubref__name">DPN</a>
+            <span class="pubref__sep">&mdash;</span>
+            <span class="pubref__blurb">Central similarity hashing with orthogonal codebook</span>
+            <div class="pubref__links"><a href="https://github.com/kamwoh/DPN">Code</a></div>
+          </div>
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--top">NeurIPS 2019</span>
+            <a href="https://github.com/kamwoh/DeepIPR" class="pubref__name">DeepIPR</a>
+            <span class="pubref__sep">&mdash;</span>
+            <span class="pubref__blurb">Passport-based DNN ownership verification</span>
+            <div class="pubref__links"><a href="https://github.com/kamwoh/DeepIPR">Code</a> <a href="https://kamwoh.github.io/DeepIPR/">Web</a></div>
+          </div>
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--muted">Preprint</span>
+            <a href="https://github.com/kamwoh/chirpy3d" class="pubref__name">Chirpy3D</a>
+            <span class="pubref__sep">&mdash;</span>
+            <span class="pubref__blurb">Part-aware 3D generation from unposed 2D images</span>
+            <div class="pubref__links"><a href="https://github.com/kamwoh/chirpy3d">Code</a></div>
+          </div>
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--muted">Open Source</span>
+            <a href="https://github.com/CISiPLab/cisip-FIRe" class="pubref__name">FIRe</a>
+            <span class="pubref__sep">&mdash;</span>
+            <span class="pubref__blurb">Fast Image Retrieval benchmarking framework</span>
+            <div class="pubref__links"><a href="https://github.com/CISiPLab/cisip-FIRe">Code</a></div>
           </div>
         </div>
 

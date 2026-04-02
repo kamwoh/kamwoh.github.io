@@ -117,23 +117,6 @@
     loaderEl.remove();
   }
 
-  // --- Publication group toggles ---
-  function initToggles() {
-    var toggles = document.querySelectorAll('.pub-group__toggle');
-    toggles.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        var list = btn.nextElementSibling;
-        if (expanded) {
-          list.classList.add('collapsed');
-        } else {
-          list.classList.remove('collapsed');
-        }
-      });
-    });
-  }
-
   // --- Smooth scroll for nav links ---
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(function(a) {
@@ -149,7 +132,6 @@
 
   // --- Init ---
   function init() {
-    initToggles();
     initSmoothScroll();
 
     if (document.readyState === 'complete') {
