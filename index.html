@@ -105,7 +105,7 @@
           <div class="timeline__item" data-year="2026">
             <div class="timeline__node timeline__node--new"></div>
             <div class="timeline__content">
-              <span class="timeline__year">2026</span>
+              <span class="timeline__year">2026 <span class="timeline__loc">🇬🇧 UK</span></span>
               <h3 class="timeline__title">Training LMs for Vector Graphics</h3>
               <p class="timeline__desc">Applied structured spatial generation to a new modality. VecGlypher fine-tunes multimodal LLMs to directly emit SVG path commands — no raster intermediate — via a two-stage curriculum (syntax mastery, then style refinement), producing editable vector glyphs from text or image exemplars.</p>
               <div class="timeline__papers">
@@ -121,7 +121,7 @@
           <div class="timeline__item" data-year="2026">
             <div class="timeline__node timeline__node--new"></div>
             <div class="timeline__content">
-              <span class="timeline__year">2025 &ndash; 2026</span>
+              <span class="timeline__year">2025 &ndash; 2026 <span class="timeline__loc">🇬🇧 UK</span></span>
               <h3 class="timeline__title">Generative Neural Rendering</h3>
               <p class="timeline__desc">Moved beyond per-object NeRF distillation to a unified rendering paradigm. Kaleido is a sequence-to-sequence transformer that directly synthesises novel views — no explicit 3D representations, no per-scene optimisation — pre-trained on video, then fine-tuned for zero-shot novel view synthesis.</p>
               <div class="timeline__papers">
@@ -137,7 +137,7 @@
           <div class="timeline__item" data-year="2024">
             <div class="timeline__node timeline__node--highlight"></div>
             <div class="timeline__content">
-              <span class="timeline__year">2024 &ndash; 2025</span>
+              <span class="timeline__year">2024 &ndash; 2025 <span class="timeline__loc">🇬🇧 UK</span></span>
               <h3 class="timeline__title">Learning 3D from Unposed 2D</h3>
               <p class="timeline__desc">Lifted PartCraft's part-aware generation into 3D. Chirpy3D fine-tunes multi-view diffusion models with LoRA, learns a continuous part latent space, and distils part-controlled views into NeRF — generating fine-grained 3D objects from unposed 2D images alone.</p>
               <div class="timeline__papers">
@@ -153,7 +153,7 @@
           <div class="timeline__item" data-year="2024">
             <div class="timeline__node timeline__node--highlight"></div>
             <div class="timeline__content">
-              <span class="timeline__year">2024</span>
+              <span class="timeline__year">2024 <span class="timeline__loc">🇬🇧 UK</span></span>
               <h3 class="timeline__title">Controlling Diffusion Models</h3>
               <p class="timeline__desc">ConceptHash showed that parts can be encoded separately — but can we also <em>generate</em> by parts? PartCraft answers yes: entropy-based attention losses steer cross-attention so each part token controls its own spatial region, enabling compositional image generation from part-level descriptions.</p>
               <div class="timeline__papers">
@@ -169,7 +169,7 @@
           <div class="timeline__item" data-year="2023">
             <div class="timeline__node"></div>
             <div class="timeline__content">
-              <span class="timeline__year">2023 &ndash; 2024</span>
+              <span class="timeline__year">2023 &ndash; 2024 <span class="timeline__loc">🇬🇧 UK</span></span>
               <h3 class="timeline__title">Tackling Core Hashing Problems</h3>
               <p class="timeline__desc">Addressed fundamental hashing challenges: SDC solved similarity collapse in unsupervised hashing via Wasserstein-calibrated distributions; FIRe unified benchmarking; ConceptHash made codes interpretable — each sub-code attends to a discoverable visual part, turning hash bits into semantic concepts.</p>
               <div class="timeline__papers">
@@ -187,7 +187,7 @@
           <div class="timeline__item" data-year="2020">
             <div class="timeline__node"></div>
             <div class="timeline__content">
-              <span class="timeline__year">2020 &ndash; 2021</span>
+              <span class="timeline__year">2020 &ndash; 2021 <span class="timeline__loc">🇨🇳 China</span></span>
               <h3 class="timeline__title">Deep Hashing for Image Retrieval</h3>
               <p class="timeline__desc">The orthogonal binary codes used in watermarking map directly to hashing — both need compact codes with maximum Hamming separation. DPN introduced central similarity with orthogonal class centres; OrthoHash distilled it to a single cosine objective, proving the codebook alone drives retrieval performance.</p>
               <div class="timeline__papers">
@@ -204,7 +204,7 @@
           <div class="timeline__item" data-year="2020">
             <div class="timeline__node"></div>
             <div class="timeline__content">
-              <span class="timeline__year">2020 &ndash; 2022</span>
+              <span class="timeline__year">2020 &ndash; 2022 <span class="timeline__loc">🇨🇳 China</span></span>
               <h3 class="timeline__title">Watermarking DNN Outputs</h3>
               <p class="timeline__desc">Extended ownership protection from model weights to model outputs. IPR-GAN embeds both white-box signatures in GAN weights and black-box watermarks in generated images, enabling dual verification without sacrificing visual quality.</p>
               <div class="timeline__papers">
@@ -220,7 +220,7 @@
           <div class="timeline__item" data-year="2019">
             <div class="timeline__node"></div>
             <div class="timeline__content">
-              <span class="timeline__year">2019</span>
+              <span class="timeline__year">2019 <span class="timeline__loc">🇲🇾 Malaysia</span></span>
               <h3 class="timeline__title">Watermarking DNN Weights</h3>
               <p class="timeline__desc">Started by studying how to protect DNN intellectual property. DeepIPR embeds learnable "passport" layers into normalization parameters — the model only produces correct outputs with the right passport, defeating ambiguity attacks without degrading performance.</p>
               <div class="timeline__papers">
@@ -321,12 +321,82 @@
       </div>
       <div class="footer__inner">
         <span class="footer__prompt">&gt;</span>
-        <span class="footer__text">Built with Claude Code</span>
+        <a href="#" class="footer__text footer__cc-link" id="show-skill">Built with Claude Code</a>
         <span class="footer__sep">|</span>
         <span class="footer__text">&copy; 2026 Kam Woh Ng</span>
       </div>
     </footer>
 
+  </div>
+
+  <!-- Skill modal -->
+  <div id="skill-modal" class="skill-modal">
+    <div class="skill-modal__backdrop" id="skill-backdrop"></div>
+    <div class="skill-modal__window">
+      <div class="skill-modal__header">
+        <span class="skill-modal__icon">&#9656;</span>
+        <span class="skill-modal__title">skill.md — Build your own Claude Code-style site</span>
+        <button class="skill-modal__close" id="skill-close">&times;</button>
+      </div>
+      <div class="skill-modal__body">
+        <pre class="skill-modal__code"><code># Claude Code Personal Site
+
+Build a personal academic/portfolio website styled like the Claude Code terminal UI.
+
+## Prompt
+
+> Build me a single-page personal website with a Claude Code terminal aesthetic.
+> Use plain HTML + CSS + JS (no frameworks). It should include:
+>
+> 1. **Loading animation**: A terminal-style loader with braille spinners
+>    (&#x28CB;&#x2819;&#x2839;...), typed command text, task checklist with
+>    checkmarks, then fade into the main site.
+>
+> 2. **Dark terminal theme**: Dark navy background (#111827), monospace fonts,
+>    amber accents (#d97706), indigo links (#818cf8), green highlights (#4ade80),
+>    cyan badges (#22d3ee). Sticky frosted-glass nav bar.
+>
+> 3. **Profile section**: Grid layout — avatar + links on left, terminal-block
+>    bio card on right (with header bar like a code editor tab).
+>
+> 4. **Research journey timeline**: Vertical line with gradient, colored nodes
+>    (green=new, cyan=highlight), connector labels between items showing how
+>    each phase led to the next.
+>
+> 5. **Compact publication list**: 4-column grid rows
+>    (venue | name+tag | blurb | links). Color-coded venues — cyan for top
+>    venues, amber for awards. Pulsing green "New" badges.
+>
+> 6. **Staggered reveal**: Content fades in with translateY after loader
+>    completes, with incremental transition-delays.
+>
+> Host on GitHub Pages with a `.nojekyll` file.
+
+## Key CSS Variables
+
+```css
+--bg: #111827;        --accent: #d97706;
+--bg-surface: #1a1f2e; --link: #818cf8;
+--bg-card: #1f2937;   --green: #4ade80;
+--border: #2d3748;    --cyan: #22d3ee;
+--text: #e0ddd5;      --purple: #c084fc;
+```
+
+## File Structure
+
+```
+index.html          ← entire site in one file
+assets/css/style.css ← all styles
+assets/js/main.js   ← loader animation + smooth scroll
+.nojekyll           ← skip Jekyll on GitHub Pages
+```</code></pre>
+      </div>
+      <div class="skill-modal__footer">
+        <a href="https://github.com/kamwoh/kamwoh.github.io" target="_blank" class="skill-modal__btn skill-modal__btn--star">&#9733; Star this repo</a>
+        <a href="https://github.com/kamwoh" target="_blank" class="skill-modal__btn skill-modal__btn--follow">+ Follow @kamwoh</a>
+        <a href="https://twitter.com/kam_woh" target="_blank" class="skill-modal__btn skill-modal__btn--follow">𝕏 Follow @kam_woh</a>
+      </div>
+    </div>
   </div>
 
   <script src="assets/js/main.js"></script>

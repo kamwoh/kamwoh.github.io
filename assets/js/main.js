@@ -130,9 +130,37 @@
     });
   }
 
+  // --- Skill modal ---
+  function initSkillModal() {
+    var modal = document.getElementById('skill-modal');
+    var btn = document.getElementById('show-skill');
+    var close = document.getElementById('skill-close');
+    var backdrop = document.getElementById('skill-backdrop');
+
+    if (!modal || !btn) return;
+
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.add('open');
+    });
+
+    close.addEventListener('click', function() {
+      modal.classList.remove('open');
+    });
+
+    backdrop.addEventListener('click', function() {
+      modal.classList.remove('open');
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') modal.classList.remove('open');
+    });
+  }
+
   // --- Init ---
   function init() {
     initSmoothScroll();
+    initSkillModal();
 
     if (document.readyState === 'complete') {
       runLoader();

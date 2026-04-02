@@ -461,6 +461,14 @@ code {
   letter-spacing: 0.06em;
 }
 
+.timeline__loc {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-size: 0.65rem;
+  margin-left: 0.4em;
+  letter-spacing: 0.02em;
+}
+
 .timeline__title {
   font-size: 1rem;
   font-weight: 700;
@@ -718,6 +726,15 @@ code {
   color: var(--text-muted);
 }
 
+.footer__cc-link {
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.footer__cc-link:hover {
+  color: var(--accent);
+}
+
 .footer__prompt {
   color: var(--accent);
   font-weight: 700;
@@ -755,4 +772,144 @@ code {
 .site.visible .pubref {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+/* ==========================================================================
+   Skill modal
+   ========================================================================== */
+
+.skill-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-modal.open {
+  display: flex;
+}
+
+.skill-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.skill-modal__window {
+  position: relative;
+  width: min(720px, 90vw);
+  max-height: 80vh;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.skill-modal__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.skill-modal__icon {
+  color: var(--green);
+  font-size: 0.7rem;
+}
+
+.skill-modal__title {
+  color: var(--text-dim);
+  flex: 1;
+}
+
+.skill-modal__close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 0.3rem;
+  font-family: var(--font-mono);
+  transition: color 0.2s;
+}
+.skill-modal__close:hover {
+  color: var(--red);
+}
+
+.skill-modal__body {
+  padding: 1.2rem;
+  overflow-y: auto;
+}
+
+.skill-modal__code {
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: var(--text-dim);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.skill-modal__code code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+.skill-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-card);
+  flex-shrink: 0;
+}
+
+.skill-modal__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.skill-modal__btn--star {
+  color: var(--accent);
+  background: rgba(217, 119, 6, 0.08);
+  border-color: rgba(217, 119, 6, 0.3);
+}
+.skill-modal__btn--star:hover {
+  background: rgba(217, 119, 6, 0.18);
+  border-color: var(--accent);
+}
+
+.skill-modal__btn--follow {
+  color: var(--link);
+  background: rgba(129, 140, 248, 0.08);
+  border-color: rgba(129, 140, 248, 0.3);
+}
+.skill-modal__btn--follow:hover {
+  background: rgba(129, 140, 248, 0.18);
+  border-color: var(--link);
 }
