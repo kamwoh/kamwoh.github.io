@@ -780,16 +780,22 @@ code {
    ========================================================================== */
 
 .skill-modal {
-  display: none;
+  display: flex;
   position: fixed;
   inset: 0;
   z-index: 9000;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .skill-modal.open {
-  display: flex;
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
 }
 
 .skill-modal__backdrop {
@@ -811,6 +817,12 @@ code {
   display: flex;
   flex-direction: column;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-modal.open .skill-modal__window {
+  transform: translateY(0) scale(1);
 }
 
 .skill-modal__header {
