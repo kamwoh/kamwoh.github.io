@@ -553,13 +553,13 @@ code {
 }
 
 .pubref__row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 100px 160px 1fr auto;
   align-items: center;
   gap: 0.6rem;
   padding: 0.6rem 0.8rem;
   border-bottom: 1px solid rgba(45, 55, 72, 0.4);
   transition: background 0.2s;
-  flex-wrap: wrap;
 }
 
 .pubref__row:last-child {
@@ -576,14 +576,18 @@ code {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   white-space: nowrap;
-  min-width: 90px;
-  flex-shrink: 0;
   color: var(--text-muted);
 }
 
 .pubref__venue--top { color: var(--cyan); }
 .pubref__venue--award { color: var(--accent); }
 .pubref__venue--muted { color: var(--text-muted); }
+
+.pubref__info {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
 
 .pubref__name {
   font-size: 0.92rem;
@@ -595,24 +599,19 @@ code {
 }
 .pubref__name:hover { color: var(--accent); }
 
-.pubref__sep {
-  color: var(--text-muted);
-  font-size: 0.7rem;
-  flex-shrink: 0;
-}
-
 .pubref__blurb {
   font-size: 0.8rem;
   color: var(--text-dim);
-  flex: 1;
   min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .pubref__links {
   display: flex;
   gap: 0.35rem;
-  margin-left: auto;
-  flex-shrink: 0;
+  justify-self: end;
 }
 
 .pubref__links a {
@@ -645,7 +644,6 @@ code {
   letter-spacing: 0.05em;
   vertical-align: middle;
   animation: pulse-green 2s ease-in-out infinite;
-  flex-shrink: 0;
 }
 
 @keyframes pulse-green {
@@ -664,14 +662,14 @@ code {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   vertical-align: middle;
-  flex-shrink: 0;
 }
 
 @media (max-width: 700px) {
-  .pubref__venue { min-width: 75px; }
+  .pubref__row {
+    grid-template-columns: 80px 1fr auto;
+    gap: 0.4rem;
+  }
   .pubref__blurb { display: none; }
-  .pubref__sep { display: none; }
-  .pubref__row { gap: 0.4rem; }
 }
 
 
@@ -684,12 +682,37 @@ code {
   background: var(--bg-surface);
 }
 
+.footer__visitors {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.2rem 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__flag-counter {
+  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.footer__flag-counter:hover {
+  border-color: var(--accent);
+}
+
+.footer__flag-counter img {
+  display: block;
+}
+
 .footer__inner {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   font-size: 0.78rem;
   color: var(--text-muted);
