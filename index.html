@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kam Woh Ng</title>
-  <meta name="description" content="AI Research Scientist at Meta AI. Research in video diffusion models, generative rendering, and talking avatars.">
+  <meta name="description" content="AI Research Scientist at Meta AI. Research in video diffusion models, generative rendering, talking avatars, and world models.">
   <meta property="og:title" content="Kam Woh Ng">
   <meta property="og:description" content="AI Research Scientist at Meta AI London">
   <meta property="og:url" content="https://kamwoh.github.io">
@@ -84,7 +84,7 @@
               <span class="terminal-block__title">about.md</span>
             </div>
             <div class="terminal-block__body">
-              <p>I am an AI Research Scientist at <a href="https://ai.meta.com/">Meta AI</a> London, where I work on <strong>video diffusion models</strong>, <strong>generative rendering</strong>, and <strong>talking avatars</strong>.</p>
+              <p>I am an AI Research Scientist at <a href="https://ai.meta.com/">Meta AI</a> London. I work on <strong>video diffusion models</strong>, <strong>generative rendering</strong>, <strong>talking avatars</strong>, and <strong>world models</strong> &mdash; teaching machines to observe, imagine, and simulate visual reality.</p>
               <p>I received my Ph.D. in Computer Science from the <a href="https://www.surrey.ac.uk/">University of Surrey</a>, supervised by Prof. <a href="http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html">Tao Xiang</a> and Prof. <a href="https://www.surrey.ac.uk/people/yi-zhe-song">Yi-Zhe Song</a>, and worked closely with Dr. <a href="https://xiatian-zhu.github.io/">Xiatian (Eddy) Zhu</a>.</p>
               <p>I completed my Bachelor's degree in Computer Science (Artificial Intelligence) at the <a href="https://um.edu.my/">University of Malaya</a>, where I was a lab member of CISIP under Prof. <a href="http://cs-chan.com/">Chan Chee Seng</a>.</p>
               <p>Contact: <code>kamwoh [at] gmail.com</code></p>
@@ -105,9 +105,25 @@
           <div class="timeline__item" data-year="2026">
             <div class="timeline__node timeline__node--new"></div>
             <div class="timeline__content">
+              <span class="timeline__year">2026 &ndash; ??? <span class="timeline__loc">🇬🇧 UK</span></span>
+              <h3 class="timeline__title">???</h3>
+              <p class="timeline__desc">Two threads converging: making video diffusion models fast enough to be practical, and building interactive worlds from the other side — where research meets the game engine dreams from 2016. Stay tuned.</p>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">towards world models</span>
+          </div>
+
+          <div class="timeline__item" data-year="2026">
+            <div class="timeline__node timeline__node--new"></div>
+            <div class="timeline__content">
               <span class="timeline__year">2026 <span class="timeline__loc">🇬🇧 UK</span></span>
               <h3 class="timeline__title">Training LMs for Vector Graphics</h3>
               <p class="timeline__desc">Applied structured spatial generation to a new modality. VecGlypher fine-tunes multimodal LLMs to directly emit SVG path commands — no raster intermediate — via a two-stage curriculum (syntax mastery, then style refinement), producing editable vector glyphs from text or image exemplars.</p>
+              <div class="timeline__gallery">
+                <img src="/images/vecglypher.png" alt="VecGlypher — LLM-based vector glyph generation pipeline" style="background:#fff;">
+              </div>
               <div class="timeline__papers">
                 <a href="https://arxiv.org/abs/2602.21461" class="timeline__paper timeline__paper--new">VecGlypher <span>CVPR 2026</span></a>
               </div>
@@ -123,7 +139,13 @@
             <div class="timeline__content">
               <span class="timeline__year">2025 &ndash; 2026 <span class="timeline__loc">🇬🇧 UK</span></span>
               <h3 class="timeline__title">Generative Neural Rendering</h3>
-              <p class="timeline__desc">Moved beyond per-object NeRF distillation to a unified rendering paradigm. Kaleido is a sequence-to-sequence transformer that directly synthesises novel views — no explicit 3D representations, no per-scene optimisation — pre-trained on video, then fine-tuned for zero-shot novel view synthesis.</p>
+              <p class="timeline__desc">Moved beyond per-object NeRF distillation toward a visual world model. Kaleido is a sequence-to-sequence transformer that directly synthesises novel views — no explicit 3D representations, no per-scene optimisation — pre-trained on video, learning to imagine how the world looks from any viewpoint. Along the way, picked up large-scale Blender rendering and 3D modeling — the undergrad game dev itch never really went away.</p>
+              <div class="timeline__gallery">
+                <video src="https://shikun.io/projects/kaleido/videos/zelda_compressed.webm" autoplay loop muted playsinline></video>
+                <video src="https://shikun.io/projects/kaleido/videos/city2_compressed.webm" autoplay loop muted playsinline></video>
+                <video src="https://shikun.io/projects/kaleido/videos/multiview/nerf_synthetic/kaleido/5_view/chair.mp4" autoplay loop muted playsinline></video>
+                <img src="/images/blender-peixiao.png" alt="Lucky cat modeled in Blender">
+              </div>
               <div class="timeline__papers">
                 <a href="https://shikun.io/projects/kaleido" class="timeline__paper timeline__paper--new">Kaleido <span>ICLR 2026</span></a>
               </div>
@@ -131,7 +153,7 @@
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">per-object NeRF &rarr; end-to-end rendering</span>
+            <span class="timeline__arrow">objects &rarr; worlds</span>
           </div>
 
           <div class="timeline__item" data-year="2024">
@@ -139,7 +161,11 @@
             <div class="timeline__content">
               <span class="timeline__year">2024 &ndash; 2025 <span class="timeline__loc">🇬🇧 UK</span></span>
               <h3 class="timeline__title">Learning 3D from Unposed 2D</h3>
-              <p class="timeline__desc">Lifted PartCraft's part-aware generation into 3D. Chirpy3D fine-tunes multi-view diffusion models with LoRA, learns a continuous part latent space, and distils part-controlled views into NeRF — generating fine-grained 3D objects from unposed 2D images alone.</p>
+              <p class="timeline__desc">Returned to the 3D world that fascinated me since my undergrad game engine days — this time through neural rendering. Restudied classical rendering, NeRF, and implicit neural representations, then built Chirpy3D: fine-tuning multi-view diffusion models with LoRA, learning a continuous part latent space, and distilling part-controlled views into NeRF — generating fine-grained 3D objects from unposed 2D images alone.</p>
+              <div class="timeline__gallery">
+                <img src="/images/chirpy3d.png" alt="Chirpy3D — part-controlled 3D generation from unposed 2D images">
+                <video src="https://kamwoh.github.io/chirpy3d/assets/videos/mix/mix1_whitebg.mp4" autoplay loop muted playsinline></video>
+              </div>
               <div class="timeline__papers">
                 <a href="https://github.com/kamwoh/chirpy3d" class="timeline__paper">Chirpy3D <span>Preprint</span></a>
               </div>
@@ -156,6 +182,9 @@
               <span class="timeline__year">2024 <span class="timeline__loc">🇬🇧 UK</span></span>
               <h3 class="timeline__title">Controlling Diffusion Models</h3>
               <p class="timeline__desc">ConceptHash showed that parts can be encoded separately — but can we also <em>generate</em> by parts? PartCraft answers yes: entropy-based attention losses steer cross-attention so each part token controls its own spatial region, enabling compositional image generation from part-level descriptions.</p>
+              <div class="timeline__gallery">
+                <img src="/images/partcraft.png" alt="PartCraft — compositional image generation from part-level descriptions">
+              </div>
               <div class="timeline__papers">
                 <a href="https://github.com/kamwoh/partcraft" class="timeline__paper">PartCraft <span>ECCV 2024</span></a>
               </div>
@@ -170,18 +199,19 @@
             <div class="timeline__node"></div>
             <div class="timeline__content">
               <span class="timeline__year">2023 &ndash; 2024 <span class="timeline__loc">🇬🇧 UK</span></span>
-              <h3 class="timeline__title">Tackling Core Hashing Problems</h3>
-              <p class="timeline__desc">Addressed fundamental hashing challenges: SDC solved similarity collapse in unsupervised hashing via Wasserstein-calibrated distributions; FIRe unified benchmarking; ConceptHash made codes interpretable — each sub-code attends to a discoverable visual part, turning hash bits into semantic concepts.</p>
+              <h3 class="timeline__title">Interpretable Visual Hashing</h3>
+              <p class="timeline__desc">ConceptHash made hash codes interpretable — each sub-code attends to a discoverable visual part, turning hash bits into semantic concepts. The first sign that compact representations could capture meaningful structure, not just similarity.</p>
+              <div class="timeline__gallery">
+                <img src="/images/concepthash.png" alt="ConceptHash — hash bits as interpretable semantic visual concepts" style="background:#fff;">
+              </div>
               <div class="timeline__papers">
-                <a href="https://github.com/kamwoh/sdc" class="timeline__paper">SDC <span>BMVC 2023 Oral</span></a>
-                <a href="https://github.com/CISiPLab/cisip-FIRe" class="timeline__paper">FIRe <span>Open Source</span></a>
                 <a href="https://github.com/kamwoh/concepthash" class="timeline__paper">ConceptHash <span>CVPRW 2024 Best Paper</span></a>
               </div>
             </div>
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">distribution &rarr; parts &rarr; interpretability</span>
+            <span class="timeline__arrow">compact codes &rarr; interpretable codes</span>
           </div>
 
           <div class="timeline__item" data-year="2020">
@@ -189,10 +219,15 @@
             <div class="timeline__content">
               <span class="timeline__year">2020 &ndash; 2021 <span class="timeline__loc">🇨🇳 China</span></span>
               <h3 class="timeline__title">Deep Hashing for Image Retrieval</h3>
-              <p class="timeline__desc">The orthogonal binary codes used in watermarking map directly to hashing — both need compact codes with maximum Hamming separation. DPN introduced central similarity with orthogonal class centres; OrthoHash distilled it to a single cosine objective, proving the codebook alone drives retrieval performance.</p>
+              <p class="timeline__desc">The orthogonal binary codes used in watermarking map directly to hashing — both need compact codes with maximum Hamming separation. DPN introduced central similarity with orthogonal class centres; OrthoHash distilled it to a single cosine objective; SDC solved similarity collapse via Wasserstein-calibrated distributions; and FIRe unified benchmarking across the field.</p>
+              <div class="timeline__gallery">
+                <img src="/images/sdc.png" alt="SDC — t-SNE visualization of hash code distributions">
+              </div>
               <div class="timeline__papers">
                 <a href="https://github.com/kamwoh/DPN" class="timeline__paper">DPN <span>IJCAI 2020</span></a>
                 <a href="https://github.com/kamwoh/orthohash" class="timeline__paper">OrthoHash <span>NeurIPS 2021</span></a>
+                <a href="https://github.com/kamwoh/sdc" class="timeline__paper">SDC <span>BMVC 2023 Oral</span></a>
+                <a href="https://github.com/CISiPLab/cisip-FIRe" class="timeline__paper">FIRe <span>Open Source</span></a>
               </div>
             </div>
           </div>
@@ -207,8 +242,12 @@
               <span class="timeline__year">2020 &ndash; 2022 <span class="timeline__loc">🇨🇳 China</span></span>
               <h3 class="timeline__title">Watermarking DNN Outputs</h3>
               <p class="timeline__desc">Extended ownership protection from model weights to model outputs. IPR-GAN embeds both white-box signatures in GAN weights and black-box watermarks in generated images, enabling dual verification without sacrificing visual quality.</p>
+              <div class="timeline__gallery">
+                <img src="/images/ipr-gan.png" alt="IPR-GAN — dual watermarking of GAN weights and outputs">
+              </div>
               <div class="timeline__papers">
-                <a href="https://github.com/dingsheng-ong/ipr-gan" class="timeline__paper">IPR-GAN <span>CVPR 2022</span></a>
+                <a href="https://github.com/dingsheng-ong/ipr-gan" class="timeline__paper">IPR-GAN <span>CVPR 2021</span></a>
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0031320321004659" class="timeline__paper" rel="noreferrer" target="_blank">IPR-Caption <span>Pattern Recognition 2022</span></a>
               </div>
             </div>
           </div>
@@ -222,9 +261,61 @@
             <div class="timeline__content">
               <span class="timeline__year">2019 <span class="timeline__loc">🇲🇾 Malaysia</span></span>
               <h3 class="timeline__title">Watermarking DNN Weights</h3>
-              <p class="timeline__desc">Started by studying how to protect DNN intellectual property. DeepIPR embeds learnable "passport" layers into normalization parameters — the model only produces correct outputs with the right passport, defeating ambiguity attacks without degrading performance.</p>
+              <p class="timeline__desc">First major publication — studied how to protect DNN intellectual property. DeepIPR embeds learnable "passport" layers into normalization parameters — the model only produces correct outputs with the right passport, defeating ambiguity attacks without degrading performance.</p>
+              <div class="timeline__gallery">
+                <img src="/images/deepipr.png" alt="DeepIPR — passport-based DNN intellectual property protection" style="background:#fff;">
+              </div>
               <div class="timeline__papers">
                 <a href="https://github.com/kamwoh/DeepIPR" class="timeline__paper">DeepIPR <span>NeurIPS 2019</span></a>
+                <a href="https://dl.acm.org/doi/abs/10.1109/TPAMI.2021.3088846" class="timeline__paper">DeepIPR <span>TPAMI 2022</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">interpretability &rarr; ownership</span>
+          </div>
+
+          <div class="timeline__item" data-year="2018">
+            <div class="timeline__node"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2018 &ndash; 2019 <span class="timeline__loc">🇲🇾 Malaysia</span></span>
+              <h3 class="timeline__title">Understanding CNNs from the Inside</h3>
+              <p class="timeline__desc">After training models to recognise and detect objects, wanted to understand <em>what</em> they actually learn. Studied CNN interpretability — visualising internal representations and asking how networks arrive at their decisions. Published first workshop paper at AAAI-19.</p>
+              <div class="timeline__gallery">
+                <img src="/images/cnn-interpretability.png" alt="CNN interpretability — visualising what networks learn internally">
+              </div>
+              <div class="timeline__papers">
+                <a href="https://arxiv.org/abs/1901.08551" class="timeline__paper">AAAI-19 Workshop <span>AAAI 2019</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">training models &rarr; understanding them</span>
+          </div>
+
+          <div class="timeline__item" data-year="2017">
+            <div class="timeline__node"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2017 <span class="timeline__loc">🇲🇾 Malaysia</span></span>
+              <h3 class="timeline__title">Object Detection</h3>
+              <p class="timeline__desc">Moved from recognition to detection — trained YOLO and SSD models to detect and localise cars. First taste of spatial reasoning: not just <em>what</em> is in the image, but <em>where</em>.</p>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">what &rarr; where</span>
+          </div>
+
+          <div class="timeline__item" data-year="2016">
+            <div class="timeline__node"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2016 &ndash; 2018 <span class="timeline__loc">🇲🇾 Malaysia</span></span>
+              <h3 class="timeline__title">Where It All Started</h3>
+              <p class="timeline__desc">Two parallel obsessions as an undergrad: training CNNs (car plate OCR with Caffe, back when deep learning meant writing prototxt files by hand) and building games (a Java-based game engine, an asteroid game with simple game AI, and hours studying how rendering and game engines work). No papers, no grand vision — just a curious student who wanted to make things that see and things you can play.</p>
+              <div class="timeline__gallery">
+                <img src="/images/carplate-ocr.jpg" alt="Malaysian car plate OCR GUI — CNN recognizing CCG8724 with perfect confidence">
               </div>
             </div>
           </div>
@@ -271,7 +362,7 @@
             <div class="pubref__links"><a href="https://github.com/kamwoh/sdc">Code</a></div>
           </div>
           <div class="pubref__row">
-            <span class="pubref__venue pubref__venue--top">CVPR 2022</span>
+            <span class="pubref__venue pubref__venue--top">CVPR 2021</span>
             <span class="pubref__info"><a href="https://github.com/dingsheng-ong/ipr-gan" class="pubref__name">IPR-GAN</a></span>
             <span class="pubref__blurb">Dual white-box/black-box GAN watermarking</span>
             <div class="pubref__links"><a href="https://github.com/dingsheng-ong/ipr-gan">Code</a></div>
@@ -397,6 +488,13 @@ assets/js/main.js   ← loader animation + smooth scroll
         <a href="https://twitter.com/kam_woh" target="_blank" class="skill-modal__btn skill-modal__btn--follow">𝕏 Follow @kam_woh</a>
       </div>
     </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox__backdrop"></div>
+    <img class="lightbox__img" src="" alt="">
+    <video class="lightbox__video" src="" autoplay loop muted playsinline></video>
   </div>
 
   <script src="assets/js/main.js"></script>
