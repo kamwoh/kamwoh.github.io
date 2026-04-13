@@ -107,12 +107,33 @@
             <div class="timeline__content">
               <span class="timeline__year">2026 &ndash; ??? <span class="timeline__loc">🇬🇧 UK</span></span>
               <h3 class="timeline__title">???</h3>
-              <p class="timeline__desc">Two threads converging: making video diffusion models fast enough to be practical, and building interactive worlds from the other side — where research meets the game engine dreams from 2016. Stay tuned.</p>
+              <p class="timeline__desc">Two directions: making video diffusion models faster and more practical, and procedurally generating unlimited 3D worlds populated with autonomous AI agents. Stay tuned.</p>
             </div>
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">2D tokens &rarr; 3D worlds?</span>
+            <span class="timeline__arrow">joint video &amp; camera generation</span>
+          </div>
+
+          <div class="timeline__item" data-year="2026">
+            <div class="timeline__node timeline__node--new"></div>
+            <div class="timeline__content">
+              <span class="timeline__year">2026 <span class="timeline__loc">🇬🇧 UK</span></span>
+              <h3 class="timeline__title">Unifying Video Generation &amp; Camera Pose</h3>
+              <p class="timeline__desc">Kaleido learned to generate novel views given unseen camera poses &mdash; but can we also recover the camera trajectory from a video? The key challenge is that camera parameters live in a completely different space from pixels. Pl&uuml;cker embeddings are 6-channel &mdash; incompatible with pretrained 3-channel video VAEs, meaning you'd need to finetune just to fit the input format. Rays as Pixels solves this with <em>raxels</em>: each camera is "unfolded" into a 3-channel image where every pixel stores its ray origin + direction, so camera poses look just like RGB frames and go straight through the same VAE. Now both can be co-denoised together, and a single model handles pose estimation, trajectory-controlled generation, and joint video-camera synthesis.</p>
+              <div class="timeline__gallery">
+                <video src="https://wbjang.github.io/raysaspixels/videos/comparison_with_kaleido/clip_0074_2.0_0.0_24_tag1024_medium_v3_seed_12345-9830.mp4" autoplay loop muted playsinline></video>
+                <video src="https://wbjang.github.io/raysaspixels/videos/pose_prediction_videos/clip_0004_camera_trajectory.mp4" autoplay loop muted playsinline></video>
+                <video src="https://wbjang.github.io/raysaspixels/videos/head_teaser.mp4" autoplay loop muted playsinline></video>
+              </div>
+              <div class="timeline__papers">
+                <a href="https://wbjang.github.io/raysaspixels/" class="timeline__paper timeline__paper--new">Rays as Pixels <span>Preprint</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__connector">
+            <span class="timeline__arrow">LLMs as vector graphics generators</span>
           </div>
 
           <div class="timeline__item" data-year="2026">
@@ -131,7 +152,7 @@
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">structured spatial tokens</span>
+            <span class="timeline__arrow">novel view synthesis as generation</span>
           </div>
 
           <div class="timeline__item" data-year="2026">
@@ -153,7 +174,7 @@
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">objects &rarr; worlds</span>
+            <span class="timeline__arrow">part-aware 3D from 2D images</span>
           </div>
 
           <div class="timeline__item" data-year="2024">
@@ -173,7 +194,7 @@
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">2D attention &rarr; 3D distillation</span>
+            <span class="timeline__arrow">compositional generation via attention</span>
           </div>
 
           <div class="timeline__item" data-year="2024">
@@ -192,7 +213,7 @@
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">part-based encoding &rarr; part-based generation</span>
+            <span class="timeline__arrow">hash bits as semantic concepts</span>
           </div>
 
           <div class="timeline__item" data-year="2023">
@@ -211,7 +232,7 @@
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">compact codes &rarr; interpretable codes</span>
+            <span class="timeline__arrow">learning compact binary codes</span>
           </div>
 
           <div class="timeline__item" data-year="2020">
@@ -233,7 +254,7 @@
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">binary signatures &rarr; binary codes</span>
+            <span class="timeline__arrow">protecting generated outputs</span>
           </div>
 
           <div class="timeline__item" data-year="2020">
@@ -253,7 +274,7 @@
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">weights &rarr; outputs</span>
+            <span class="timeline__arrow">DNN intellectual property protection</span>
           </div>
 
           <div class="timeline__item" data-year="2019">
@@ -273,7 +294,7 @@
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">interpretability &rarr; ownership</span>
+            <span class="timeline__arrow">visualising what networks learn</span>
           </div>
 
           <div class="timeline__item" data-year="2018">
@@ -292,7 +313,7 @@
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">training models &rarr; understanding them</span>
+            <span class="timeline__arrow">detecting and localising objects</span>
           </div>
 
           <div class="timeline__item" data-year="2017">
@@ -305,7 +326,7 @@
           </div>
 
           <div class="timeline__connector">
-            <span class="timeline__arrow">what &rarr; where</span>
+            <span class="timeline__arrow">CNNs, game engines, and curiosity</span>
           </div>
 
           <div class="timeline__item" data-year="2016">
@@ -342,6 +363,12 @@
             <span class="pubref__info"><a href="https://arxiv.org/abs/2602.21461" class="pubref__name">VecGlypher</a> <span class="pub__new">New</span></span>
             <span class="pubref__blurb">LLM-based vector glyph generation from text/image</span>
             <div class="pubref__links"><a href="https://arxiv.org/abs/2602.21461">arXiv</a></div>
+          </div>
+          <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--muted">Preprint</span>
+            <span class="pubref__info"><a href="https://wbjang.github.io/raysaspixels/" class="pubref__name">Rays as Pixels</a> <span class="pub__new">New</span></span>
+            <span class="pubref__blurb">Joint video generation and camera trajectory estimation</span>
+            <div class="pubref__links"><a href="https://wbjang.github.io/raysaspixels/">Project</a> <a href="https://arxiv.org/abs/2604.09429">arXiv</a></div>
           </div>
           <div class="pubref__row">
             <span class="pubref__venue pubref__venue--top">ECCV 2024</span>
