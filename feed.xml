@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kam Woh Ng — Blog</title>
+    <link>https://kamwoh.github.io/</link>
+    <atom:link href="https://kamwoh.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Notes on video diffusion, generative neural rendering, world models, and research engineering.</description>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 29 Apr 2026 00:00:00 +0000</lastBuildDate>
+
+    <item>
+      <title>Hello, World — and how this blog is built</title>
+      <link>https://kamwoh.github.io/blog/welcome/</link>
+      <guid isPermaLink="true">https://kamwoh.github.io/blog/welcome/</guid>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <description>A meta first post: how a static GitHub Pages site gets indexable blog posts, view counts, and a real comment thread — without a backend.</description>
+    </item>
+  </channel>
+</rss>
