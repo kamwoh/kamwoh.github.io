@@ -1,21 +1,15 @@
 ---
 name: blog-publish
-description: Publish a blog post from a markdown source. Use when the user finishes writing `blog/<slug>/original.md` and wants to publish — typical triggers include "publish my blog post", "publish <slug>", "I'm done with the blog post", "ship the blog". The skill renders `original.md` to HTML, regenerates `blog/<slug>/index.html`, then updates `sitemap.xml`, `feed.xml`, and the home-page blog list. Do NOT invoke for one-off edits to an already-published post unless the user explicitly says "republish".
+description: Publish a blog post on the kamwoh.github.io site. Use when the user has a draft ready and says "publish my blog post", "ship the blog", "publish <slug>", or similar. The author provides the draft (frontmatter + body) inline in conversation; the skill renders it to `blog/<slug>/index.html` and updates `sitemap.xml`, `feed.xml`, and the home-page blog list. The rendered HTML is the source of truth — there is no separate markdown source file kept on disk.
 ---
 
 # Blog publish workflow
 
-You convert a markdown draft into a deployable static blog post. The author writes one file (`original.md`); you produce everything else.
+You convert a markdown draft (provided inline by the author) into a deployable static blog post. The rendered `blog/<slug>/index.html` is the source of truth — there is no `original.md` or other markdown file persisted on disk. Markdown is just an input format the author uses when publishing or republishing.
 
 ## Inputs
 
-The author maintains:
-
-```
-blog/<slug>/original.md
-```
-
-with this YAML front-matter (everything below the closing `---` is the body):
+The author provides a draft directly in conversation, with this YAML front-matter (everything below the closing `---` is the body):
 
 ```yaml
 ---
@@ -28,23 +22,21 @@ tags: tag1, tag2          # optional, comma-separated
 (markdown body here)
 ```
 
-`<slug>` is the parent directory name and becomes the URL path: `/blog/<slug>/`.
+The slug is the parent directory under `blog/<slug>/` and becomes the URL path: `/blog/<slug>/`. If the user doesn't name a slug, propose one based on title keywords and confirm before proceeding.
 
 ## Steps
 
 Always work in this order. One step at a time, verify each.
 
-### 1. Confirm and read
+### 1. Get the draft
 
-- Identify the slug. If the user said "publish welcome", the slug is `welcome`. If ambiguous, ask.
-- Read `blog/<slug>/original.md`. Parse the front-matter (everything between the first two `---` lines) and the body (everything after).
-- Validate front-matter has `title`, `date`, `blurb`. If anything is missing, stop and ask the author.
+- Identify the slug. If the author said "publish welcome", the slug is `welcome`. If ambiguous, ask.
+- Get the frontmatter (title, date, blurb, optional tags) and the markdown body. The author either pastes a full draft, or has been composing it in conversation. If anything required is missing, stop and ask — do not invent values.
+- If `blog/<slug>/index.html` already exists, this is a republish: confirm with the author before overwriting.
 
 ### 2. Render markdown → HTML
 
-Convert the body of `original.md` (ignoring front-matter) to an HTML fragment.
-
-Use these markdown rules — be precise; no surprises:
+Convert the body to an HTML fragment using these rules — be precise; no surprises:
 
 | Markdown | HTML |
 |---|---|
@@ -65,7 +57,7 @@ Use these markdown rules — be precise; no surprises:
 
 HTML-escape `<`, `>`, `&` inside text and code. Preserve them only inside fenced code blocks (still escape, since the browser would otherwise interpret `<` as a tag).
 
-### 3. Regenerate `blog/<slug>/index.html`
+### 3. Generate `blog/<slug>/index.html`
 
 Read the template at `.claude/skills/blog-publish/post.template.html`. Substitute these placeholders (every occurrence):
 
@@ -114,7 +106,7 @@ Also update the channel's `<lastBuildDate>` to the current RFC 822 timestamp.
 
 ### 6. Update home-page blog list
 
-Edit `index.html`. Find `<div class="blog-list">`. If an `<article class="blog-item">` already links to `/blog/<slug>/`, update its date/title/blurb/tags in place. Otherwise insert a new entry **at the top** of the list:
+Edit `index.html` at the repo root. Find `<div class="blog-list">`. If an `<article class="blog-item">` already links to `/blog/<slug>/`, update its date/title/blurb/tags in place. Otherwise insert a new entry **at the top** of the list:
 
 ```html
 <article class="blog-item" itemscope itemtype="https://schema.org/BlogPosting">
@@ -146,7 +138,8 @@ Report a one-line summary: slug, URL, files written/updated.
 
 ## Rules
 
-- **`original.md` is sacred.** Never modify it. The author owns it.
+- **The HTML is the source of truth.** Do not write a `blog/<slug>/original.md` or any other persisted markdown source. Markdown is an input format only.
+- **Editing an existing post:** the author can either describe the change (you edit the HTML directly), or paste a fresh full markdown draft (you re-render the page). Don't fabricate a markdown source file just for "consistency."
 - **Don't change the home page beyond the blog list.** The journey/publications/profile sections are off-limits.
 - **Don't deploy.** Stop after step 7. The author runs `git push` themselves.
-- **Atomic writes.** If any step fails (e.g., front-matter missing a field), do not partially update sitemap/feed/home page. Stop and report.
+- **Atomic writes.** If any step fails (e.g., a required front-matter field is missing), do not partially update sitemap/feed/home page. Stop and report.

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agents, Skills, and Natural Language as the Next Abstraction Layer · Kam Woh Ng</title>
+  <meta name="description" content="What agents and skills really are, and why natural language is the next abstraction layer in programming — written for engineers trying to make sense of the AI era without wading through official docs.">
+  <meta name="author" content="Kam Woh Ng">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://kamwoh.github.io/blog/natural-language-programming/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Agents, Skills, and Natural Language as the Next Abstraction Layer">
+  <meta property="og:description" content="What agents and skills really are, and why natural language is the next abstraction layer in programming — written for engineers trying to make sense of the AI era without wading through official docs.">
+  <meta property="og:url" content="https://kamwoh.github.io/blog/natural-language-programming/">
+  <meta property="og:image" content="https://kamwoh.github.io/images/profile.png">
+  <meta property="og:site_name" content="Kam Woh Ng">
+  <meta property="article:author" content="Kam Woh Ng">
+  <meta property="article:published_time" content="2026-05-05">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@kam_woh">
+  <meta name="twitter:title" content="Agents, Skills, and Natural Language as the Next Abstraction Layer">
+  <meta name="twitter:description" content="What agents and skills really are, and why natural language is the next abstraction layer in programming — written for engineers trying to make sense of the AI era without wading through official docs.">
+
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+  <link rel="alternate" type="application/rss+xml" title="Kam Woh Ng — Blog" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Agents, Skills, and Natural Language as the Next Abstraction Layer",
+    "description": "What agents and skills really are, and why natural language is the next abstraction layer in programming — written for engineers trying to make sense of the AI era without wading through official docs.",
+    "datePublished": "2026-05-05",
+    "dateModified": "2026-05-05",
+    "author": {
+      "@type": "Person",
+      "name": "Kam Woh Ng",
+      "url": "https://kamwoh.github.io/"
+    },
+    "image": "https://kamwoh.github.io/images/profile.png",
+    "url": "https://kamwoh.github.io/blog/natural-language-programming/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://kamwoh.github.io/blog/natural-language-programming/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Kam Woh Ng"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kamwoh.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://kamwoh.github.io/#blog" },
+      { "@type": "ListItem", "position": 3, "name": "Agents, Skills, and Natural Language as the Next Abstraction Layer", "item": "https://kamwoh.github.io/blog/natural-language-programming/" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== Loading overlay ===== -->
+  <div id="loader" class="loader">
+    <div class="loader__terminal">
+      <div class="loader__line">
+        <span class="loader__prompt">&gt; </span>
+        <span class="loader__typed" id="loader-typed"></span>
+        <span class="loader__cursor" id="loader-cursor"></span>
+      </div>
+      <div id="loader-tasks"></div>
+    </div>
+  </div>
+
+  <div id="site" class="site hidden">
+
+    <header class="topbar">
+      <div class="topbar__inner">
+        <span class="topbar__name">kamwoh.github.io</span>
+        <nav class="topbar__nav">
+          <a href="/#about">About</a>
+          <a href="/#journey">Journey</a>
+          <a href="/#publications">Publications</a>
+          <a href="/#blog">Blog</a>
+          <a href="/files/cv.pdf" target="_blank">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+        <nav class="post__crumbs" aria-label="Breadcrumb">
+          <a href="/">~</a>
+          <span class="post__crumb-sep">/</span>
+          <a href="/#blog">blog</a>
+          <span class="post__crumb-sep">/</span>
+          <span>natural-language-programming</span>
+        </nav>
+
+        <header class="post__header">
+          <h1 class="post__title" itemprop="headline">Agents, Skills, and Natural Language as the Next Abstraction Layer</h1>
+          <div class="post__meta">
+            <time class="post__date" datetime="2026-05-05" itemprop="datePublished">2026-05-05</time>
+            <span class="post__sep">·</span>
+            <span class="post__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <span itemprop="name">Kam Woh Ng</span>
+            </span>
+          </div>
+        </header>
+
+        <div class="post__body" itemprop="articleBody">
+          <p><em>If you're new to all this: an LLM (large language model) is the kind of AI that powers ChatGPT, Claude, and Gemini. It's auto-complete, but enormously bigger. Instead of guessing one word like your phone does, it can guess whole sentences, paragraphs, even entire letters or stories. It does this by predicting, one word at a time, what a sensible answer would look like. It learned how by reading more writing than a person could finish in a thousand lifetimes.</em></p>
+          <p>My thought on today's LLM is their ability to understand natural language and to generate the required output — and it doesn't really matter how accurate the first attempt is.</p>
+          <p>That's the bit people skip past. The argument against LLMs is usually "it hallucinates, it gets things wrong". Sure. But the interesting capability isn't zero-shot perfection. It's that you describe what you want in plain English, and something comes back you can correct in plain English. The syntax wall is just gone.</p>
+
+          <h2>A new programming paradigm</h2>
+          <p>This is a new paradigm of programming, where we finally get rid of memorizing the syntax and focus on higher-level thinking. So don't think Claude is taking over our jobs — it is helping us achieve things faster and better.</p>
+          <p>The thing being automated is the part that was already a tax: remembering which method on which library takes which arguments in which order. The thing that's <em>not</em> being automated is knowing what you actually want, and being able to tell whether you got it.</p>
+          <p>All we need is to shift our mindset toward programming with natural language. That sounds easy. Being precise in English is its own skill, and it's probably the skill the next decade of software work will run on.</p>
+
+          <h2>What is an agent?</h2>
+          <p>An agent is an LLM with hands. That's it.</p>
+          <p>You take a model that can read and write text, you give it tools — read a file, run a command, search the web, call an API — and you put it in a loop. Now it can do things. Take a step. See what happened. Decide what to do next. Repeat until the job's done, or it's stuck, or it's out of budget.</p>
+          <p>That's the whole idea. The model is the brain, the tools are the hands, the loop is the heartbeat. Everything fancier — multi-agent setups, planners, critics, review passes — is just more brains, more hands, more loops, arranged differently. This is what people mean by AI programming: an LLM doing work in a loop, with tools, against a goal.</p>
+          <p>So yes — Claude Code, the thing you're talking to when you open a terminal, is an agent. The base model is the brain; the harness gives it tools and runs the loop.</p>
+          <p>You can also spawn <em>specific</em> agents — same brain, different briefing. One Claude with the system prompt "you are a careful security reviewer" and read-only file tools is a security-review agent. Another with "you are a test writer, output pytest cases" is a test-writing agent. Same model, different personality, different scope. The agent isn't the model; it's the model plus the role you wrap around it.</p>
+
+          <h2>What is a skill?</h2>
+          <p>A skill is a saved workflow. A small, focused set of instructions the agent pulls in when it sees a matching task — "when the user asks to publish a blog, do these steps."</p>
+          <p>If an agent is the running program, a skill is a function in its library. You don't teach the agent how to publish a blog every time. You write it down once, save it, and the agent reaches for it when it's needed.</p>
+          <p>A skill might be one paragraph: "When the user asks to publish a blog, read <code>original.md</code>, render markdown to HTML, update the sitemap, update the RSS feed, add an entry to the home page." That's a function. It just doesn't have parentheses.</p>
+          <p>Side by side, a Python function and a skill are the same shape:</p>
+          <pre><code class="language-python">def publish_blog(slug):
+    md = read(f"blog/{slug}/original.md")
+    html = render_markdown(md)
+    write(f"blog/{slug}/index.html", html)
+    update_sitemap(slug)
+    update_feed(slug)
+    add_to_home(slug)
+</code></pre>
+          <pre><code class="language-markdown">When the user asks to publish a blog:
+1. Read original.md from the blog folder.
+2. Render the markdown to HTML.
+3. Write the HTML to index.html.
+4. Update sitemap.xml.
+5. Update feed.xml.
+6. Add an entry to the home page.
+</code></pre>
+          <p>Same logic, same control flow, same I/O — different language. The first runs on a Python interpreter; the second runs on an LLM. Both describe the same procedure. One uses parentheses, the other uses paragraphs.</p>
+          <p>This is how natural-language code starts to look like real software. You stop pasting the same long prompt over and over. You name a thing, save it, reuse it. Same instinct that turned shell one-liners into shell scripts.</p>
+          <p>Here's the loop that closes the system: you don't even have to write skills by hand. You tell Claude what you want — "I want a skill that publishes a blog from a markdown file" — and Claude writes the skill markdown for you, structured in a way Claude itself will follow more reliably than your original description. LLMs writing instructions for LLMs. The system writes its own programs.</p>
+
+          <h2>Agents vs skills</h2>
+          <p>Short version:</p>
+          <ul>
+            <li><strong>Agent</strong> — the runner. Holds the tools, calls the model, keeps going until the job is done.</li>
+            <li><strong>Skill</strong> — the routine. A reusable "here's how to do this kind of task" the agent can grab.</li>
+          </ul>
+          <p>An agent without skills still works — it just figures out everything from scratch each time. A skill without an agent is just a markdown file. You need both for the system to feel like programming, not chatting.</p>
+          <p>Once you see it this way — agents as programs, skills as functions — the rest follows.</p>
+
+          <h2>Under the hood: it's all text prediction</h2>
+          <p>Here's what actually happens when you run Claude Code.</p>
+          <p>The model reads a big block of text — your CLAUDE.md, the conversation so far, the contents of any file that's been opened, the descriptions of every available tool. All of that is just text in its context window.</p>
+          <p>Then it predicts the next text. That's the only thing an LLM does — predict what comes next.</p>
+          <p>But the predicted text isn't always a reply to you. It might be:</p>
+          <ul>
+            <li>a tool call (e.g. "read this file", "run this command")</li>
+            <li>a block of <em>thinking</em> — reasoning to itself before acting</li>
+            <li>a plain message back to you</li>
+          </ul>
+          <p>The harness — Claude Code itself — looks at the predicted text, sees "this is a tool call", actually executes it, and feeds the result back as more text in the next prediction. Then the model predicts again. Loop until the job is done.</p>
+          <p>That's the agent. Strip away the marketing and it's a text predictor in a loop, with a harness that turns some of its predictions into real actions.</p>
+          <p>This also explains why skills work. When you write a skill, you're not programming a robot — you're writing text that, when included in the model's context, biases its next prediction toward the steps you want. CLAUDE.md is the same. A user prompt is the same. Everything is just text going in and text coming out.</p>
+
+          <h2>The model is replaceable</h2>
+          <p>Claude, Codex, Gemini — they all work the same way. A model in a loop, with tools, predicting text. The teams behind them train differently — different internal formats, different strategies, different data — so the <em>behaviour</em> differs. But the shape doesn't.</p>
+          <p>What that means: a good harness is mostly model-agnostic. The skill of designing prompts, building verification loops, structuring tools, writing skills — that doesn't get thrown out when the next model lands. It transfers. A better model just makes the same harness produce better results.</p>
+          <p>It's like Python and C. A good engineer can build the same thing in either language — Python just makes everything faster. A better model is the same: it doesn't replace the engineer, it just makes them faster.</p>
+          <p>This is why "which model is best?" is the wrong question. What matters more is the harness around the model — Claude Code, Cursor, the agent loops you write yourself. Give two engineers the same model and you'll get wildly different results, just based on how well each one set up the work.</p>
+          <p>Look at <a href="https://github.com/openclaw/openclaw" rel="noreferrer" target="_blank">OpenClaw</a> — a self-hosted personal AI assistant with channel adapters (WhatsApp, Slack, Discord, iMessage), a skills runtime, and an onboarding wizard, all built around a model you bring yourself. Pure harness. No training. The README puts it bluntly: "the Gateway is just the control plane — the product is the assistant." That's a real product competing with closed AI assistants on harness alone — because that's the part anyone can build.</p>
+          <p>Bet on the harness, not the model. Models get replaced. Harness skill keeps growing.</p>
+
+          <h2>Just another abstraction layer</h2>
+          <p>Although today's LLMs are not 100% accurate, with proper harness engineering — tools, verification, retries, agent orchestration — we are still essentially programming. It has just become natural language programming.</p>
+          <p>A workflow is a program. A program is a workflow. We've just stopped writing them in Python.</p>
+          <p>This is like how machine code evolved into assembly code, assembly code evolved into C, and C into Python. Take the same operation — adding two numbers — at each layer:</p>
+          <pre><code>; machine code (x86-64)
+B8 05 00 00 00
+83 C0 03
+
+; assembly
+mov eax, 5
+add eax, 3
+
+// C
+int x = 5 + 3;
+
+# Python
+x = 5 + 3
+
+# Natural language
+"Add 5 and 3."
+</code></pre>
+          <p>Each step, the syntax shrinks and the intent gets louder. With each one, humans can focus on better describing what they want instead of thinking about low-level syntax (though I am not saying that's not important — someone still has to write the compiler, and someone still has to write the harness).</p>
+          <p>Each layer never killed the one below it. It just changed what most people spend their day on. I think natural language is the next one.</p>
+
+          <h2>Anyone can build now</h2>
+          <p>And this changes who gets to build. Not just professional engineers shipping faster — anyone with an idea and the patience to describe it. A personal website. A small tool that saves ten minutes a day. A weird little game.</p>
+          <p>The barrier was never having ideas. The barrier was syntax. And syntax just got abstracted away.</p>
+          <p>Plot twist: this whole site was built by Claude. Every paragraph above. The HTML. The CSS. The RSS feed. The publishing skill itself. I described what I wanted in plain English. Claude wrote it.</p>
+          <p>This post was written the same way. That's the proof.</p>
+        </div>
+      </article>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span class="footer__prompt">&gt;</span>
+        <a href="/" class="footer__text">&larr; back to home</a>
+        <span class="footer__sep">|</span>
+        <span class="footer__text">&copy; 2026 Kam Woh Ng</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
