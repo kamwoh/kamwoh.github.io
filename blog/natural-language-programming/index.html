@@ -38,7 +38,7 @@
     "headline": "Agents, Skills, and Natural Language as the Next Abstraction Layer",
     "description": "What agents and skills really are, and why natural language is the next abstraction layer in programming — written for engineers trying to make sense of the AI era without wading through official docs.",
     "datePublished": "2026-05-05",
-    "dateModified": "2026-05-05",
+    "dateModified": "2026-05-06",
     "author": {
       "@type": "Person",
       "name": "Kam Woh Ng",
@@ -185,6 +185,13 @@
           <p>The harness — Claude Code itself — looks at the predicted text, sees "this is a tool call", actually executes it, and feeds the result back as more text in the next prediction. Then the model predicts again. Loop until the job is done.</p>
           <p>That's the agent. Strip away the marketing and it's a text predictor in a loop, with a harness that turns some of its predictions into real actions.</p>
           <p>This also explains why skills work. When you write a skill, you're not programming a robot — you're writing text that, when included in the model's context, biases its next prediction toward the steps you want. CLAUDE.md is the same. A user prompt is the same. Everything is just text going in and text coming out.</p>
+
+          <h2>We program a programmer</h2>
+          <p>There's a recursion buried in all this that's worth naming. When you write a skill, tune a system prompt, or set up an agent loop, you're not programming a machine in the old sense. You're programming a programmer.</p>
+          <p>The thing you're configuring (the LLM) is the thing that produces the actual code. You're one layer up. You're not the author of the code; you're the author of the thing that authors the code.</p>
+          <p>This isn't entirely unprecedented. Programs have been writing programs since the 60s — compilers, code generators, macros. Code that produces code is older than most of us.</p>
+          <p>What's new is the meta-language. For the first time, the layer above the code is plain English instead of more code. That's the actual shift. Recursion isn't new; doing it in a non-formal language is.</p>
+          <p>Which means the bottleneck moves. It's no longer your typing speed or your knowledge of which library handles dates correctly. It's how well you can specify intent. That's the skill that compounds in this paradigm. Everything else is downstream.</p>
 
           <h2>The model is replaceable</h2>
           <p>Claude, Codex, Gemini — they all work the same way. A model in a loop, with tools, predicting text. The teams behind them train differently — different internal formats, different strategies, different data — so the <em>behaviour</em> differs. But the shape doesn't.</p>
