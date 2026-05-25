@@ -67,109 +67,11 @@ code {
 
 
 /* ==========================================================================
-   Loader
-   ========================================================================== */
-
-.loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.loader.fade-out {
-  opacity: 0;
-  transform: translateY(-20px);
-  pointer-events: none;
-}
-
-.loader__terminal {
-  width: min(560px, 88vw);
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.loader__line {
-  display: flex;
-  align-items: center;
-}
-
-.loader__prompt {
-  color: var(--accent);
-  font-weight: 700;
-  margin-right: 0.4em;
-}
-
-.loader__typed {
-  color: var(--text);
-}
-
-.loader__cursor {
-  display: inline-block;
-  width: 8px;
-  height: 1.1em;
-  background: var(--accent);
-  margin-left: 2px;
-  vertical-align: text-bottom;
-  animation: blink 800ms step-end infinite;
-}
-
-.loader__task {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0;
-  transition: opacity 120ms;
-}
-.loader__task.visible { opacity: 1; }
-
-.loader__spinner {
-  color: var(--link);
-  width: 16px;
-  text-align: center;
-  flex-shrink: 0;
-}
-.loader__check {
-  color: var(--green);
-  width: 16px;
-  text-align: center;
-  flex-shrink: 0;
-}
-.loader__task-text {
-  color: var(--text-dim);
-}
-.loader__task.done .loader__task-text {
-  color: var(--text);
-}
-
-.loader__done {
-  margin-top: 6px;
-  opacity: 0;
-  transition: opacity 200ms;
-}
-.loader__done.visible { opacity: 1; }
-.loader__done-text {
-  color: var(--text);
-  font-weight: 600;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-
-/* ==========================================================================
    Site
    ========================================================================== */
 
 .site { opacity: 0; transition: opacity 0.5s ease 0.1s; }
 .site.visible { opacity: 1; }
-.site.hidden { display: block; visibility: hidden; height: 0; overflow: hidden; }
 
 
 /* ==========================================================================
