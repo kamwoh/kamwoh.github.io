@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kam Woh Ng — Research Scientist @ Meta AI</title>
-  <meta name="description" content="Kam Woh Ng — Research Scientist at Meta AI London. Video diffusion models, generative neural rendering, talking avatars, world models. PhD from University of Surrey.">
+  <title>Kam Woh Ng — ex-Meta</title>
+  <meta name="description" content="Kam Woh Ng — ex-Meta. Video diffusion models, generative neural rendering, talking avatars, world models. PhD from University of Surrey.">
   <meta name="author" content="Kam Woh Ng">
   <meta name="keywords" content="Kam Woh Ng, Meta AI, video diffusion, generative rendering, neural rendering, world models, computer vision, Kaleido, VecGlypher, Rays as Pixels, Chirpy3D, PartCraft, ConceptHash, deep hashing, DeepIPR">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://kamwoh.github.io/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Kam Woh Ng — Research Scientist @ Meta AI">
+  <meta property="og:title" content="Kam Woh Ng — ex-Meta">
   <meta property="og:description" content="Video diffusion models, generative neural rendering, talking avatars, and world models.">
   <meta property="og:url" content="https://kamwoh.github.io/">
   <meta property="og:type" content="website">
@@ -21,7 +21,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:creator" content="@kam_woh">
-  <meta name="twitter:title" content="Kam Woh Ng — Research Scientist @ Meta AI">
+  <meta name="twitter:title" content="Kam Woh Ng — ex-Meta">
   <meta name="twitter:description" content="Video diffusion models, generative neural rendering, talking avatars, and world models.">
   <meta name="twitter:image" content="https://kamwoh.github.io/images/profile.png">
 
@@ -40,7 +40,6 @@
     "url": "https://kamwoh.github.io/",
     "image": "https://kamwoh.github.io/images/profile.png",
     "jobTitle": "Research Scientist",
-    "worksFor": { "@type": "Organization", "name": "Meta AI", "url": "https://ai.meta.com/" },
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "University of Surrey", "url": "https://www.surrey.ac.uk/" },
       { "@type": "CollegeOrUniversity", "name": "University of Malaya", "url": "https://um.edu.my/" }
@@ -91,7 +90,7 @@
         <div class="profile__card">
           <img src="/images/profile.png" alt="Kam Woh Ng" class="profile__avatar">
           <h1 class="profile__name">Kam Woh Ng</h1>
-          <p class="profile__role">Research Scientist @ Meta AI</p>
+          <p class="profile__role">ex-Meta</p>
           <p class="profile__location">London, UK</p>
           <div class="profile__links">
             <a href="mailto:kamwoh@gmail.com" class="profile__link" title="Email">
@@ -124,7 +123,7 @@
               <span class="terminal-block__title">about.md</span>
             </div>
             <div class="terminal-block__body">
-              <p>I am a Research Scientist at <a href="https://ai.meta.com/">Meta AI</a> London. I work on <strong>video diffusion models</strong>, <strong>generative rendering</strong>, <strong>talking avatars</strong>, and <strong>world models</strong> &mdash; teaching machines to observe, imagine, and simulate visual reality. The longer-term hope is to make worlds as easy to build as they are to imagine &mdash; so anyone can freely express the ones in their head, not only engineers.</p>
+              <p>I was a Research Scientist at <a href="https://ai.meta.com/">Meta AI</a> London, and I am currently in a gap in Malaysia. I work on <strong>video diffusion models</strong>, <strong>generative rendering</strong>, <strong>talking avatars</strong>, and <strong>world models</strong> &mdash; teaching machines to observe, imagine, and simulate visual reality. The longer-term hope is to make worlds as easy to build as they are to imagine &mdash; so anyone can freely express the ones in their head, not only engineers.</p>
               <p>I received my Ph.D. in Computer Science from the <a href="https://www.surrey.ac.uk/">University of Surrey</a>, supervised by Prof. <a href="http://personal.ee.surrey.ac.uk/Personal/T.Xiang/index.html">Tao Xiang</a> and Prof. <a href="https://www.surrey.ac.uk/people/yi-zhe-song">Yi-Zhe Song</a>, and worked closely with Dr. <a href="https://xiatian-zhu.github.io/">Xiatian (Eddy) Zhu</a>.</p>
               <p>I completed my Bachelor's degree in Computer Science (Artificial Intelligence) at the <a href="https://um.edu.my/">University of Malaya</a>, where I was a lab member of CISIP under Prof. <a href="http://cs-chan.com/">Chan Chee Seng</a>.</p>
               <p>Contact: <code>kamwoh [at] gmail.com</code></p>
@@ -145,14 +144,16 @@
           <div class="timeline__item" data-year="2026">
             <div class="timeline__node timeline__node--new"></div>
             <div class="timeline__content">
-              <span class="timeline__year">2026 &ndash; ??? <span class="timeline__loc">🇬🇧 UK</span></span>
-              <h3 class="timeline__title">Yume &mdash; A Programmable World Model</h3>
-              <p class="timeline__desc">Building explicit world models you can actually program. <a href="https://github.com/kamwoh/yume">Yume</a> is a world engine on Godot where entire games are defined as JSON data rather than per-game code. A minimal deterministic interpreter with seven primitives (Entity, Tag, Rule, Trigger, Effect, Query, Relation) runs the world tick-by-tick, so you describe a world in plain language, Claude compiles it into JSON, and it materialises into something runnable &mdash; no world-specific engine code. The same substrate doubles as a testbed for RL and neural world-model training. Early prototypes below, all fully generated games.</p>
+              <span class="timeline__year">2026 <span class="timeline__loc">🇬🇧 UK</span></span>
+              <h3 class="timeline__title">Multi-Agent World Models</h3>
+              <p class="timeline__desc">Kaleido and Rays as Pixels generate the world from one camera path &mdash; but a shared world has many players, and each one sees only part of it. A world model built on egocentric streams alone drifts: revisited places change, and the players disagree about each other. OverSeer renders each player's view together with a few fixed auxiliary cameras. The cameras never move, so they anchor the shared world &mdash; places stay where they were when a player returns, and what one player does is seen by the others. A &delta;-VAE codes each fixed camera as one reference frame plus a small residual for what moved (108 tokens per latent frame instead of 864), so an extra camera is cheap. Tested on Minecraft, Doom, and real multi-camera capture.</p>
               <div class="timeline__gallery">
-                <video src="/images/generated-game.mp4" autoplay loop muted playsinline aria-label="Generated game prototype"></video>
-                <video src="/images/sokoban.mp4" autoplay loop muted playsinline aria-label="Sokoban prototype"></video>
-                <video src="/images/forestdemo.mp4" autoplay loop muted playsinline aria-label="Forest demo prototype" onloadedmetadata="this.playbackRate=0.5"></video>
-                <video src="/images/forestdemov2.mp4" autoplay loop muted playsinline aria-label="Forest demo prototype v2" onloadedmetadata="this.playbackRate=0.5"></video>
+                <video src="https://runjiali-rl.github.io/OverSeer/static/videos/rollouts/minecraft-1-agents.mp4" autoplay loop muted playsinline aria-label="OverSeer Minecraft rollout, agent views"></video>
+                <video src="https://runjiali-rl.github.io/OverSeer/static/videos/rollouts/minecraft-1-aux.mp4" autoplay loop muted playsinline aria-label="OverSeer Minecraft rollout, auxiliary camera views"></video>
+                <video src="https://runjiali-rl.github.io/OverSeer/static/videos/rollouts/doom-1-agents.mp4" autoplay loop muted playsinline aria-label="OverSeer Doom rollout, agent views"></video>
+              </div>
+              <div class="timeline__papers">
+                <a href="https://runjiali-rl.github.io/OverSeer/" class="timeline__paper timeline__paper--new">OverSeer <span>Preprint</span></a>
               </div>
             </div>
           </div>
@@ -399,6 +400,12 @@
 
         <div class="pubref">
           <div class="pubref__row">
+            <span class="pubref__venue pubref__venue--muted">Preprint</span>
+            <span class="pubref__info"><a href="https://runjiali-rl.github.io/OverSeer/" class="pubref__name">OverSeer</a> <span class="pub__new">New</span></span>
+            <span class="pubref__blurb">Multi-agent world models with fixed auxiliary camera views</span>
+            <div class="pubref__links"><a href="https://runjiali-rl.github.io/OverSeer/">Project</a> <a href="https://arxiv.org/abs/2610.28554">arXiv</a></div>
+          </div>
+          <div class="pubref__row">
             <span class="pubref__venue pubref__venue--top">ICLR 2026</span>
             <span class="pubref__info"><a href="https://shikun.io/projects/kaleido" class="pubref__name">Kaleido</a> <span class="pub__new">New</span></span>
             <span class="pubref__blurb">Unified neural rendering via spatial generative models</span>
@@ -482,6 +489,22 @@
         </h2>
 
         <div class="project-list">
+          <article class="project">
+            <a href="https://github.com/kamwoh/plan-and-act" class="project__thumb">
+              <img src="/images/plan-and-act.jpg" alt="plan-and-act: a robot arm task as Claude imagines it, next to the same task in the simulator" loading="lazy" width="1400" height="672">
+            </a>
+            <div class="project__body">
+              <a href="https://github.com/kamwoh/plan-and-act" class="project__title">Robot Control with Claude</a>
+              <p class="project__desc">Claude as the world model for a robot arm. Type an instruction, and Claude plans the task in its head and shows the plan as a 3D video. Then a MuJoCo arm runs the plan, Claude compares the result with what it imagined, and it re-plans until the task is done. Works with 18 arms, from the Franka Panda to the UR5e, through the Claude Code CLI.</p>
+              <div class="project__meta">
+                <span class="blog-item__tag">robotics</span>
+                <span class="blog-item__tag">mujoco</span>
+                <span class="blog-item__tag">world-models</span>
+                <span class="blog-item__tag">llm</span>
+                <a href="https://github.com/kamwoh/plan-and-act" class="project__link">Code</a>
+              </div>
+            </div>
+          </article>
           <article class="project">
             <a href="https://github.com/kamwoh/yume" class="project__thumb">
               <video src="/images/generated-game.mp4" autoplay loop muted playsinline preload="metadata" aria-label="A game generated by Yume from a text description"></video>
